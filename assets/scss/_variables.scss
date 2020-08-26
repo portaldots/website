@@ -1,0 +1,48 @@
+// Font Family
+$font-family: Inter, "Noto Sans JP", sans-serif;
+
+// Font Size
+$base-font-size-px: 14;
+$base-font-size: #{$base-font-size-px + 'px'};
+$font-size: #{(14 / $base-font-size-px) + 'rem'};
+// inputのフォントサイズは16px以上にしないと、フォーカス時 iOS デバイスで
+// ズームしてしまう
+$font-size-input: #{(16 / $base-font-size-px) + 'rem'};
+
+// Color
+$color-text: #22292f;
+$color-primary: #1879f4;
+$color-primary-2: #a135db;
+$color-danger: #db3c3e;
+$color-success: #1ba24e;
+$color-warning: #fe750a;
+$color-muted: #6c757d;
+$color-muted-2: #a7b6c2;
+$color-muted-3: #c3cfd8;
+$color-border: #dae0e6;
+$color-bg-grey: #f3f4fa;
+$color-bg-light: #efefef;
+$color-bg-white: #fff;
+$semantic-colors: (
+  primary: $color-primary,
+  danger: $color-danger,
+  success: $color-success,
+  warning: $color-warning,
+  muted: $color-muted,
+);
+
+// Spacing (WIP)
+$spacing-xl: 4rem;
+$spacing-lg: 2rem;
+$spacing: 1.5rem;
+$spacing-s: 1.2rem;
+$spacing-md: 1rem;
+$spacing-sm: 0.5rem;
+$spacing-xs: 0.2rem;
+$spacing-xxs: 0.1rem;
+
+// Parameters
+$app-header-height: 4rem;
+
+// Z Indexes
+$z-index-app-header: 9999;

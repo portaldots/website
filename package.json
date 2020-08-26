@@ -21,12 +21,14 @@
     }
   },
   "dependencies": {
+    "bootstrap": "^4.5.2",
     "nuxt": "^2.14.0"
   },
   "devDependencies": {
     "@nuxt/types": "~2.14.0",
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/stylelint-module": "^4.0.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^7.6.0",
@@ -35,9 +37,9 @@
     "eslint-plugin-prettier": "^3.1.2",
     "husky": "^4.0.0",
     "lint-staged": "^10.0.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
-    "sass-loader": "^9.0.2",
+    "sass-loader": "^9.0.3",
     "stylelint": "^13.6.1"
   }
 }

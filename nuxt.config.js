@@ -15,7 +15,14 @@ export default {
         content: '',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        href:
+          'https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap&display=swap',
+        rel: 'stylesheet',
+      },
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -24,7 +31,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['./assets/scss/main.scss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -37,7 +44,18 @@ export default {
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
+    // Doc: https://github.com/nuxt-community/style-resources-module
+    '@nuxtjs/style-resources',
   ],
+  eslint: {
+    fix: true,
+  },
+  stylelint: {
+    fix: true,
+  },
+  styleResources: {
+    scss: ['./assets/scss/_variables.scss'],
+  },
   /*
    ** Nuxt.js modules
    */
