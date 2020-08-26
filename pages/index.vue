@@ -1,29 +1,5 @@
 <template>
   <div>
-    <header class="app-header">
-      <AppContainer class="app-header__container">
-        <nuxt-link to="/" class="app-header__logo-link">
-          <img
-            src="@/assets/img/logotype.svg"
-            class="app-header__logo"
-            alt="PortalDots"
-          />
-        </nuxt-link>
-        <nav class="app-header__nav">
-          <nuxt-link to="/" class="app-header__nav__item">ホーム</nuxt-link>
-          <nuxt-link to="/" class="app-header__nav__item">
-            使い方ガイド
-          </nuxt-link>
-          <nuxt-link to="/" class="app-header__nav__item">
-            お問い合わせ
-          </nuxt-link>
-          <nuxt-link to="/" class="app-header__nav__item"> GitHub </nuxt-link>
-          <nuxt-link to="/" class="app-header__nav__item is-button">
-            ダウンロード
-          </nuxt-link>
-        </nav>
-      </AppContainer>
-    </header>
     <main class="app-main">
       <div class="home-header">
         <AppContainer class="home-header__container">
@@ -36,7 +12,7 @@
                 PHPとMySQLで動作する、オープンソースの学園祭運営支援ウェブシステム。
               </p>
               <div class="home-header__actions">
-                <AppButton to="/" primary>ダウンロード</AppButton>
+                <AppButton to="/" primary>ダウンロード(無料)</AppButton>
                 <AppButton to="/">使い方ガイド</AppButton>
               </div>
             </div>
@@ -169,63 +145,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.app-header {
-  height: $app-header-height;
-  z-index: $z-index-app-header;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  &__container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding-top: $spacing-md;
-    padding-bottom: $spacing-md;
-  }
-
-  &__logo-link {
-    display: block;
-    height: 100%;
-    padding: $spacing-sm;
-  }
-
-  &__logo {
-    display: block;
-    height: 100%;
-    width: auto;
-  }
-
-  &__nav {
-    display: flex;
-    height: 100%;
-    margin-left: auto;
-    align-items: center;
-
-    &__item {
-      display: flex;
-      height: 100%;
-      padding: 0 $spacing-md;
-      align-items: center;
-      text-decoration: none;
-      color: $color-text;
-
-      &.is-button {
-        border: 1.5px solid $color-primary;
-        color: $color-primary;
-        border-radius: 9999px;
-        font-weight: bold;
-        margin-left: $spacing-md;
-      }
-
-      &:hover {
-        opacity: 0.75;
-      }
-    }
-  }
-}
-
 .home-header {
   background: linear-gradient(
       to top,
@@ -239,18 +158,26 @@ export default {
   align-items: center;
   overflow: hidden;
 
+  @media screen and (max-width: 767.5px) {
+    padding: #{$app-header-height * 2} 0 $app-header-height;
+  }
+
   &__row {
     align-items: center;
   }
 
   &__copy {
-    font-size: 2.25rem;
+    font-size: 2.75rem;
     line-height: 1.4;
     margin: 0 0 0.75rem;
     color: transparent;
     background: linear-gradient(150deg, #{$color-primary}, #{$color-primary-2});
     background-clip: text;
     -webkit-background-clip: text;
+
+    @media screen and (max-width: 767.5px) {
+      font-size: 2.25rem;
+    }
   }
 
   &__description {
@@ -288,9 +215,15 @@ export default {
     left top / 60vmax url(~assets/img/logotype.svg) no-repeat;
 
   &__heading {
-    font-size: 1.75rem;
+    font-size: 2rem;
     line-height: 1.4;
     margin: 0 0 0.75rem;
+    letter-spacing: -0.1px;
+
+    @media screen and (max-width: 767.5px) {
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
   }
 }
 

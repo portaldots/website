@@ -1,10 +1,10 @@
 // Font Family
-$font-family: Inter, "Noto Sans JP", sans-serif;
+$font-family: Inter, 'Noto Sans JP', sans-serif;
 
 // Font Size
-$base-font-size-px: 14;
+$base-font-size-px: 15;
 $base-font-size: #{$base-font-size-px + 'px'};
-$font-size: #{(14 / $base-font-size-px) + 'rem'};
+$font-size: #{(16 / $base-font-size-px) + 'rem'};
 // inputのフォントサイズは16px以上にしないと、フォーカス時 iOS デバイスで
 // ズームしてしまう
 $font-size-input: #{(16 / $base-font-size-px) + 'rem'};
@@ -45,4 +45,6 @@ $spacing-xxs: 0.1rem;
 $app-header-height: 4rem;
 
 // Z Indexes
-$z-index-app-header: 9999;
+$z-index-app-header-toggle: 9999;
+$z-index-app-header-drawer: 9995;
+$z-index-app-header: 9990;

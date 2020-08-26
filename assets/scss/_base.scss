@@ -5,6 +5,8 @@ html {
 body {
   font-family: $font-family;
   font-size: $font-size;
-  font-feature-settings: "palt";
-  line-height: 1.7;
+  line-height: 1.75;
+  font-feature-settings: 'palt';
+  letter-spacing: 0.2px;
+  -webkit-font-smoothing: antialiased;
 }
