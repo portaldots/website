@@ -233,7 +233,7 @@ export default {
       rgba(255, 255, 255, 0.9)
     ),
     linear-gradient(150deg, #{$color-primary}, #{$color-primary-2});
-  padding: $spacing-xl 0;
+  padding: $app-header-height 0;
   min-height: 100vh;
   display: flex;
   align-items: center;
