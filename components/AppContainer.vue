@@ -17,7 +17,8 @@ export default {
 
 <style lang="scss" scoped>
 .app-container {
-  padding: 0 $spacing-md;
+  padding-left: $spacing-md;
+  padding-right: $spacing-md;
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
