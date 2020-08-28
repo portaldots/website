@@ -151,7 +151,7 @@ export default {
       rgba(255, 255, 255, 1),
       rgba(255, 255, 255, 0.9)
     ),
-    linear-gradient(150deg, #{$color-primary}, #{$color-primary-2});
+    linear-gradient(120deg, #{$color-primary}, #{$color-primary-2});
   padding: $app-header-height 0;
   min-height: 100vh;
   display: flex;
@@ -200,7 +200,7 @@ export default {
       width: 150%;
       min-width: 1px;
       margin-left: -50%;
-      margin-top: $spacing-lg;
+      margin-top: $spacing-xl;
     }
   }
 }

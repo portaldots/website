@@ -1,7 +1,14 @@
 <template>
-  <header class="app-header">
+  <header
+    class="app-header"
+    :style="{ backgroundColor: `rgba(255, 255, 255, ${backgroundOpacity})` }"
+  >
     <AppContainer class="app-header__container">
-      <nuxt-link to="/" class="app-header__logo-link">
+      <nuxt-link
+        to="/"
+        class="app-header__logo-link"
+        :aria-hidden="isOpen ? 'true' : 'false'"
+      >
         <img
           src="@/assets/img/logotype.svg"
           class="app-header__logo"
@@ -11,14 +18,21 @@
       <button
         class="app-header__toggle"
         :class="{ 'is-open': isOpen }"
-        title="メニューを開閉"
+        aria-label="グローバルメニューを開閉"
+        :aria-expanded="isOpen ? 'true' : 'false'"
+        aria-controls="appHeaderNav"
         @click="toggle"
       >
-        <span class="app-header__toggle__bar"></span>
-        <span class="app-header__toggle__bar"></span>
-        <span class="app-header__toggle__bar"></span>
+        <span class="app-header__toggle__bar" aria-hidden="true"></span>
+        <span class="app-header__toggle__bar" aria-hidden="true"></span>
+        <span class="app-header__toggle__bar" aria-hidden="true"></span>
       </button>
-      <nav class="app-header__nav" :class="{ 'is-open': isOpen }">
+      <nav
+        id="appHeaderNav"
+        class="app-header__nav"
+        :class="{ 'is-open': isOpen }"
+        aria-label="グローバルメニュー"
+      >
         <nuxt-link to="/" class="app-header__nav__item">ホーム</nuxt-link>
         <nuxt-link to="/" class="app-header__nav__item">
           使い方ガイド
@@ -26,7 +40,15 @@
         <nuxt-link to="/" class="app-header__nav__item">
           お問い合わせ
         </nuxt-link>
-        <nuxt-link to="/" class="app-header__nav__item"> GitHub </nuxt-link>
+        <a
+          href="https://github.com/portal-dots/PortalDots"
+          class="app-header__nav__item"
+          target="_blank"
+          rel="noopener noreferrer"
+          lang="en"
+        >
+          GitHub
+        </a>
         <nuxt-link to="/" class="app-header__nav__item is-button">
           ダウンロード
         </nuxt-link>
@@ -44,12 +66,24 @@ export default {
   },
   data() {
     return {
+      backgroundOpacity: 0,
       isOpen: false,
     }
+  },
+  mounted() {
+    this.onScroll()
+    window.addEventListener('scroll', this.onScroll)
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.onScroll)
   },
   methods: {
     toggle() {
       this.isOpen = !this.isOpen
+      this.$emit('toggleNav', this.isOpen)
+    },
+    onScroll() {
+      this.backgroundOpacity = Math.max(Math.min(window.scrollY / 300, 1), 0)
     },
   },
 }
@@ -59,7 +93,7 @@ export default {
 .app-header {
   height: $app-header-height;
   z-index: $z-index-app-header;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -75,7 +109,7 @@ export default {
   &__logo-link {
     display: block;
     height: 100%;
-    padding: $spacing-sm;
+    padding: $spacing-sm 0;
   }
 
   &__logo {
@@ -165,33 +199,36 @@ export default {
       right: 0;
       top: 0;
       height: $app-header-height;
-      width: $app-header-height;
-      padding: $spacing-s;
+      width: $app-header-height * 0.8;
+      padding: $spacing $spacing-md;
       z-index: $z-index-app-header-toggle;
+      overflow: hidden;
+      $inner-width: ($app-header-height * 0.8) - ($spacing-md * 2);
+      $inner-height: $app-header-height - ($spacing * 2);
 
       &__bar {
         position: relative;
         display: block;
         width: 100%;
         height: 2px;
-        border-radius: 1px;
+        border-radius: 1.5px;
         background: $color-text;
         transition: 0.3s ease all;
+        top: 0;
       }
 
       &.is-open &__bar {
         &:nth-child(1) {
-          top: calc(50% - 1px);
-          transform: rotate(45deg);
-          transform-origin: center top;
+          transform: translateY(#{$inner-height / 2}) translateY(-1.5px)
+            rotate(45deg);
         }
         &:nth-child(2) {
+          transform: translateX(120%);
           opacity: 0;
         }
         &:nth-child(3) {
-          top: -50%;
-          transform: rotate(-45deg);
-          transform-origin: center bottom;
+          transform: translateY(-#{$inner-height / 2}) translateY(0.5px)
+            rotate(-45deg);
         }
       }
     }

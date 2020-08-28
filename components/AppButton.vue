@@ -23,7 +23,7 @@ export default {
 .app-button {
   background: $color-bg-white;
   display: inline-block;
-  padding: $spacing-sm $spacing-lg;
+  padding: $spacing-sm $spacing;
   text-decoration: none;
   color: $color-primary;
   font-weight: bold;
