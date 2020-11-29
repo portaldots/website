@@ -4,7 +4,7 @@
 
     <section class="download-main">
       <AppContainer small>
-        <h2 class="download-main__heading">最新バージョン</h2>
+        <h2 class="download-main__heading">最新バージョンはこちら</h2>
         <p class="download-main__lead">
           {{ latestReleaseInfo.name }} •
           {{ bytesToSize(latestReleaseInfo.assets[0].size) }}
