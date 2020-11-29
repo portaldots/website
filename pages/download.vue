@@ -43,7 +43,7 @@
             </p>
             <p class="download-infos__col__paragraph">
               <a href="https://www.sakura.ne.jp/" target="_blank"
-                >さくらのレンタルサーバー</a
+                >さくらのレンタルサーバ</a
               >
               スタンダードプラン以上での動作を確認しています。
             </p>
