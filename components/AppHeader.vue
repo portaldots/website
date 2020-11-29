@@ -224,11 +224,11 @@ export default {
       right: 0;
       top: 0;
       height: $app-header-height;
-      width: $app-header-height * 0.8;
-      padding: $spacing $spacing-md;
+      width: $app-header-height;
+      padding: $spacing;
       z-index: $z-index-app-header-toggle;
       overflow: hidden;
-      $inner-width: ($app-header-height * 0.8) - ($spacing-md * 2);
+      $inner-width: ($app-header-height) - ($spacing * 2);
       $inner-height: $app-header-height - ($spacing * 2);
 
       &__bar {
