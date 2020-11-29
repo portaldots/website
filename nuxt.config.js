@@ -49,6 +49,7 @@ export default {
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
+    '@nuxtjs/google-analytics',
   ],
   eslint: {
     fix: true,
@@ -58,6 +59,9 @@ export default {
   },
   styleResources: {
     scss: ['./assets/scss/_variables.scss'],
+  },
+  googleAnalytics: {
+    id: 'G-SJ1YLYL7V8',
   },
   /*
    ** Nuxt.js modules
