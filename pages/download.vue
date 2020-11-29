@@ -45,7 +45,7 @@
               <a href="https://www.sakura.ne.jp/" target="_blank"
                 >さくらのレンタルサーバ</a
               >
-              スタンダードプラン以上での動作を確認しています。
+              スタンダードプランでの動作を確認しています。
             </p>
           </section>
           <section class="download-infos__col">
