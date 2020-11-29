@@ -12,8 +12,18 @@
                 PHPとMySQLで動作する、オープンソースの学園祭運営支援ウェブシステム。
               </p>
               <div class="home-header__actions">
-                <AppButton to="/" primary>ダウンロード(無料)</AppButton>
-                <AppButton to="/">使い方ガイド</AppButton>
+                <AppButton to="/" primary wide>ダウンロード(無料)</AppButton>
+                <AppButton
+                  href="https://github.com/portal-dots/PortalDots"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  lang="en"
+                  flat
+                >
+                  <font-awesome-icon :icon="['fab', 'github']" />
+                  GitHub
+                </AppButton>
+                <!-- <AppButton to="/">使い方ガイド</AppButton> -->
               </div>
             </div>
             <div class="col-md-6">
@@ -33,6 +43,16 @@
           </h2>
           <p>
             PortalDots(ポータルドット)は、学園祭実行委員会と参加企画のコミュニケーションを支援するウェブシステムです。ログイン機能の構築、お知らせメールの一斉配信や各種申請の受付をオンラインで行うことができます。開発は東京理科大学の学園祭実行委員経験者が主導するボランティアの開発チームによって行っています。PortalDotsはオープンソースです。
+          </p>
+          <p>
+            <a
+              href="https://github.com/portal-dots/PortalDots/blob/master/CONTRIBUTING.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <font-awesome-icon :icon="['fas', 'arrow-right']" fixed-width />
+              PortalDotsの開発に参加してみませんか? (GitHub)
+            </a>
           </p>
         </AppContainer>
       </section>
@@ -152,14 +172,14 @@ export default {
       rgba(255, 255, 255, 0.9)
     ),
     linear-gradient(120deg, #{$color-primary}, #{$color-primary-2});
-  padding: $app-header-height 0;
-  min-height: 100vh;
+  padding: $app-header-height $spacing-lg;
+  min-height: #{'min(90vh, 80vw)'};
   display: flex;
   align-items: center;
   overflow: hidden;
 
   @media screen and (max-width: 767.5px) {
-    padding: #{$app-header-height * 2} 0 $app-header-height;
+    padding: #{$app-header-height * 1.5} $spacing-md $app-header-height;
   }
 
   &__row {
@@ -191,7 +211,7 @@ export default {
 
   &__main-screenshot {
     display: block;
-    width: 65vw;
+    width: #{'min(65vw, 800px)'};
     min-width: 200%;
     height: auto;
     margin-left: -1.5rem;
