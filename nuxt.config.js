@@ -61,7 +61,7 @@ export default {
     scss: ['./assets/scss/_variables.scss'],
   },
   googleAnalytics: {
-    id: 'G-SJ1YLYL7V8',
+    id: 'UA-39733737-19',
   },
   /*
    ** Nuxt.js modules
