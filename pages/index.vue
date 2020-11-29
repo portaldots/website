@@ -189,14 +189,14 @@ export default {
       rgba(255, 255, 255, 0.9)
     ),
     linear-gradient(120deg, #{$color-primary}, #{$color-primary-2});
-  padding: $app-header-height $spacing-lg;
+  padding: $app-header-height 0;
   min-height: #{'min(90vh, 80vw)'};
   display: flex;
   align-items: center;
   overflow: hidden;
 
   @media screen and (max-width: 767.5px) {
-    padding: #{$app-header-height * 1.5} $spacing-md $app-header-height;
+    padding: #{$app-header-height * 1.5} 0 $app-header-height;
   }
 
   &__row {
