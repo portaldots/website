@@ -14,6 +14,7 @@
             :href="latestReleaseInfo.assets[0].browser_download_url"
             primary
             wide
+            @click="onClickDownload"
           >
             <font-awesome-icon :icon="['fas', 'download']" fixed-width />
             ZIP形式でダウンロード
@@ -117,6 +118,13 @@ export default {
       const sizes = ['B', 'KB', 'MB', 'GB', 'TB']
       const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)))
       return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i]
+    },
+    onClickDownload() {
+      this.$ga.event({
+        eventCategory: 'Downloads',
+        eventAction: 'Release ZIP',
+        eventLabel: this.latestReleaseInfo.name,
+      })
     },
   },
   head() {

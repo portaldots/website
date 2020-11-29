@@ -5,6 +5,7 @@
     :to="to ? to : undefined"
     class="app-button"
     :class="{ 'is-flat': flat, 'is-primary': primary, 'is-wide': wide }"
+    @click="handleClick"
   >
     <slot />
   </component>
@@ -32,6 +33,11 @@ export default {
     wide: {
       type: Boolean,
       default: false,
+    },
+  },
+  methods: {
+    handleClick(e) {
+      this.$emit('click', e)
     },
   },
 }
