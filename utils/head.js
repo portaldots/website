@@ -20,7 +20,7 @@ export const head = (title, description, imageUrl) => {
       {
         hid: 'twitter:site',
         name: 'twitter:site',
-        content: '@AcappellaRank',
+        content: '@PortalDots',
       },
       {
         hid: 'twitter:title',
@@ -35,7 +35,9 @@ export const head = (title, description, imageUrl) => {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: imageUrl || '',
+        content:
+          imageUrl ||
+          'https://repository-images.githubusercontent.com/245637809/6a04c400-a6da-11ea-89d2-c7f6a00a64c0',
       },
     ],
   }
