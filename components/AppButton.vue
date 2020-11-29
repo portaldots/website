@@ -1,17 +1,35 @@
 <template>
-  <nuxt-link :to="to" class="app-button" :class="{ 'is-primary': primary }">
+  <component
+    :is="href ? 'a' : 'nuxt-link'"
+    :href="href ? href : undefined"
+    :to="to ? to : undefined"
+    class="app-button"
+    :class="{ 'is-flat': flat, 'is-primary': primary, 'is-wide': wide }"
+  >
     <slot />
-  </nuxt-link>
+  </component>
 </template>
 
 <script>
 export default {
   props: {
+    href: {
+      type: String,
+      default: null,
+    },
     to: {
       type: String,
-      required: true,
+      default: null,
     },
     primary: {
+      type: Boolean,
+      default: false,
+    },
+    flat: {
+      type: Boolean,
+      default: false,
+    },
+    wide: {
       type: Boolean,
       default: false,
     },
@@ -31,13 +49,26 @@ export default {
   box-shadow: 0 0.2rem 0.8rem rgba($color-primary, 0.2);
   transition: 0.25s ease all;
 
+  &.is-flat {
+    background: transparent;
+    box-shadow: none;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
   &.is-primary {
     background: $color-primary;
     color: $color-bg-white;
   }
 
-  &:hover {
-    transform: translateY(-0.1rem);
+  &.is-wide {
+    padding-left: $spacing-lg;
+    padding-right: $spacing-lg;
+  }
+
+  &:not(.is-flat):hover {
     box-shadow: 0 0.4rem 1rem rgba($color-primary, 0.4);
   }
 }
