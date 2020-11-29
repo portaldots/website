@@ -47,7 +47,10 @@
           rel="noopener noreferrer"
           lang="en"
         >
-          GitHub
+          GitHub<font-awesome-icon
+            :icon="['fas', 'external-link-alt']"
+            class="app-header__nav__item__icon"
+          />
         </a>
         <nuxt-link to="/" class="app-header__nav__item is-button">
           ダウンロード
@@ -143,6 +146,12 @@ export default {
       &:hover {
         opacity: 0.75;
       }
+
+      &__icon {
+        margin-left: $spacing-sm;
+        opacity: 0.6;
+        font-size: 80%;
+      }
     }
   }
 
@@ -153,7 +162,7 @@ export default {
   @media screen and (max-width: 767.5px) {
     &__nav {
       visibility: hidden;
-      transform: scale(1.05);
+      transform: scale(1.1);
       opacity: 0;
       position: fixed;
       z-index: $z-index-app-header-drawer;
