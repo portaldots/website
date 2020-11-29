@@ -12,7 +12,9 @@
                 PHPとMySQLで動作する、オープンソースの学園祭運営支援ウェブシステム。
               </p>
               <div class="home-header__actions">
-                <AppButton to="/" primary wide>ダウンロード(無料)</AppButton>
+                <AppButton to="/download/" primary wide
+                  >ダウンロード(無料)</AppButton
+                >
                 <AppButton
                   href="https://github.com/portal-dots/PortalDots"
                   target="_blank"
@@ -58,16 +60,7 @@
       </section>
       <section class="screenshots-slide">
         <AppContainer>
-          <img
-            src="@/assets/img/screenshots/screenshot_form_editor.png"
-            style="
-              width: 100%;
-              height: auto;
-              display: block;
-              border-radius: 0.5rem;
-              box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
-            "
-          />
+          <HomeScreenshotsCarousel />
         </AppContainer>
       </section>
       <section class="features">
@@ -144,6 +137,24 @@
           </div>
         </AppContainer>
       </section>
+      <section class="download">
+        <AppContainer small>
+          <h2 class="download__heading">
+            インストールは簡単！<br />いますぐPortalDotsをはじめよう
+          </h2>
+          <p class="download__lead">
+            PHP(7.3以上)とMySQL(5.7以上)に対応しているレンタルサーバーにファイルを設置したら、インストーラーの指示に従うだけ。
+          </p>
+          <p class="download__lead">
+            PortalDotsをダウンロードして、学園祭をさらに楽しくしよう。
+          </p>
+          <div class="download__links">
+            <AppButton to="/download/" primary wide>
+              ダウンロード(無料)
+            </AppButton>
+          </div>
+        </AppContainer>
+      </section>
     </main>
   </div>
 </template>
@@ -152,14 +163,20 @@
 import { head } from '@/utils/head'
 import AppContainer from '@/components/AppContainer.vue'
 import AppButton from '@/components/AppButton.vue'
+import HomeScreenshotsCarousel from '@/components/HomeScreenshotsCarousel.vue'
 
 export default {
   components: {
     AppContainer,
     AppButton,
+    HomeScreenshotsCarousel,
   },
   head() {
-    return head()
+    return head(
+      null,
+      null,
+      'https://repository-images.githubusercontent.com/245637809/6a04c400-a6da-11ea-89d2-c7f6a00a64c0'
+    )
   },
 }
 </script>
@@ -248,7 +265,7 @@ export default {
 }
 
 .features {
-  padding: $spacing-xl 0;
+  padding: #{$spacing-xl + $spacing} 0 $spacing-xl;
 
   &__heading {
     text-align: center;
@@ -300,6 +317,27 @@ export default {
 
   &__description {
     text-align: justify;
+  }
+}
+
+.download {
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    linear-gradient(120deg, #{$color-primary}, #{$color-primary-2});
+  padding: $spacing-xl 0;
+
+  &__heading {
+    font-size: 2rem;
+    line-height: 1.4;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  &__links {
+    text-align: center;
   }
 }
 </style>

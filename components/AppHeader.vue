@@ -1,6 +1,7 @@
 <template>
   <header
     class="app-header"
+    :class="{ 'is-top': backgroundOpacity < 0.25 }"
     :style="{ backgroundColor: `rgba(255, 255, 255, ${backgroundOpacity})` }"
   >
     <AppContainer class="app-header__container">
@@ -32,14 +33,15 @@
         class="app-header__nav"
         :class="{ 'is-open': isOpen }"
         aria-label="グローバルメニュー"
+        @click="toggle"
       >
         <nuxt-link to="/" class="app-header__nav__item">ホーム</nuxt-link>
-        <nuxt-link to="/" class="app-header__nav__item">
+        <!-- <nuxt-link to="/" class="app-header__nav__item">
           使い方ガイド
         </nuxt-link>
         <nuxt-link to="/" class="app-header__nav__item">
           お問い合わせ
-        </nuxt-link>
+        </nuxt-link> -->
         <a
           href="https://github.com/portal-dots/PortalDots"
           class="app-header__nav__item"
@@ -52,7 +54,7 @@
             class="app-header__nav__item__icon"
           />
         </a>
-        <nuxt-link to="/" class="app-header__nav__item is-button">
+        <nuxt-link to="/download/" class="app-header__nav__item is-button">
           ダウンロード
         </nuxt-link>
       </nav>
@@ -100,6 +102,14 @@ export default {
   top: 0;
   left: 0;
   right: 0;
+  transition: 0.3s ease height, 0.3s ease padding, 0.1s ease background-color;
+  will-change: height, padding;
+
+  &.is-top {
+    height: $app-header-height-top;
+    padding-top: #{($app-header-height-top - $app-header-height) / 2};
+    padding-bottom: #{($app-header-height-top - $app-header-height) / 2};
+  }
 
   &__container {
     display: flex;
@@ -160,6 +170,12 @@ export default {
   }
 
   @media screen and (max-width: 767.5px) {
+    &.is-top {
+      height: $app-header-height;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
     &__nav {
       visibility: hidden;
       transform: scale(1.1);

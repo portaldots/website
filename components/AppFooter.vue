@@ -9,6 +9,15 @@
             <ul class="app-footer__social" aria-label="ソーシャルメディア">
               <li class="app-footer__social__listitem">
                 <a
+                  href="mailto:portal-dots@hrgrweb.com"
+                  class="app-footer__social__link"
+                  aria-label="PortalDotsにメールで問い合わせる"
+                >
+                  <font-awesome-icon :icon="['fas', 'envelope']" />
+                </a>
+              </li>
+              <li class="app-footer__social__listitem">
+                <a
                   href="https://github.com/portal-dots/PortalDots"
                   class="app-footer__social__link"
                   target="_blank"
@@ -49,15 +58,15 @@ export default {
 
 <style lang="scss" scoped>
 .app-footer {
-  margin: $spacing-xl 0 0;
-  color: $color-muted;
+  margin: 0;
+  color: #fff;
+  background: $color-muted;
 
   @media screen and (max-width: 767.5px) {
     text-align: center;
   }
 
   &__content {
-    border-top: 1px solid $color-border;
     padding-top: $spacing-lg;
     padding-bottom: $spacing-lg;
   }
@@ -83,7 +92,7 @@ export default {
     &__link {
       display: block;
       padding: $spacing-md;
-      color: $color-muted;
+      color: #fff;
       text-decoration: none;
       font-size: 1.5rem;
       transition: 0.3s ease all;
