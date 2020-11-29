@@ -10,3 +10,13 @@ body {
   letter-spacing: 0.2px;
   -webkit-font-smoothing: antialiased;
 }
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($color-primary, 10);
+    text-decoration: underline;
+  }
+}
