@@ -190,13 +190,14 @@ export default {
     ),
     linear-gradient(120deg, #{$color-primary}, #{$color-primary-2});
   padding: $app-header-height 0;
-  min-height: #{'min(90vh, 80vw)'};
+  min-height: #{'min(max(1000px, 90vh), 80vw)'};
   display: flex;
   align-items: center;
   overflow: hidden;
 
   @media screen and (max-width: 767.5px) {
     padding: #{$app-header-height * 1.5} 0 $app-header-height;
+    min-height: auto;
   }
 
   &__row {
@@ -228,10 +229,10 @@ export default {
 
   &__main-screenshot {
     display: block;
-    width: #{'min(65vw, 800px)'};
+    width: #{'min(65vw, 640px)'};
     min-width: 200%;
     height: auto;
-    margin-left: -1.5rem;
+    margin-left: -3rem;
 
     @media screen and (max-width: 767.5px) {
       width: 150%;
