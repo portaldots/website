@@ -68,12 +68,12 @@
             </h2>
             <p class="download-infos__col__paragraph">
               <a href="https://lin.ee/aeee9s9" target="_blank"
-                >PortalDots 公式 LINE アカウント</a
+                >PortalDots の LINE 公式アカウント</a
               >
               では、PortalDots
               のセットアップ方法や利用方法に関する質問を受け付けております(無料)。ぜひご活用ください。
             </p>
-            <p class="download-infos__col__paragraph">
+            <p class="download-infos__col__paragraph is-notice">
               ※PortalDots開発チームはボランティアによる活動です。LINE
               でのサポートは解決を保証するものではありません。予めご了承ください。
             </p>
@@ -91,6 +91,10 @@
               <a href="https://twitter.com/PortalDots" target="_blank"
                 >@PortalDots</a
               >
+            </p>
+            <p class="download-infos__col__paragraph">
+              LINE :
+              <a href="https://lin.ee/aeee9s9" target="_blank">@aeee9s9</a>
             </p>
           </section>
         </div>
@@ -200,6 +204,11 @@ export default {
 
       &__paragraph {
         margin: 0 0 0.5rem;
+
+        &.is-notice {
+          color: $color-muted;
+          font-size: 80%;
+        }
       }
     }
   }
