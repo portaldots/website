@@ -4,34 +4,36 @@
 
     <section class="download-main">
       <AppContainer small>
-        <h2 class="download-main__heading">最新バージョンはこちら</h2>
-        <p class="download-main__lead">
-          {{ latestReleaseInfo.name }} •
-          {{ bytesToSize(latestReleaseInfo.assets[0].size) }}
-        </p>
-        <div class="download-main__download-wrap">
-          <AppButton
-            :href="latestReleaseInfo.assets[0].browser_download_url"
-            primary
-            wide
-            @click="onClickDownload"
-          >
-            <font-awesome-icon :icon="['fas', 'download']" fixed-width />
-            ZIP形式でダウンロード
-          </AppButton>
-        </div>
-        <div class="download-main__sub-links">
-          <a :href="latestReleaseInfo.html_url" target="_blank">
-            リリースノート
-          </a>
-          •
-          <a
-            href="https://github.com/portal-dots/PortalDots/releases"
-            target="_blank"
-          >
-            過去のバージョン
-          </a>
-        </div>
+        <AppContentTopCard class="download-main__card">
+          <h2 class="download-main__heading">最新バージョンはこちら</h2>
+          <p class="download-main__lead">
+            {{ latestReleaseInfo.name }} •
+            {{ bytesToSize(latestReleaseInfo.assets[0].size) }}
+          </p>
+          <div class="download-main__download-wrap">
+            <AppButton
+              :href="latestReleaseInfo.assets[0].browser_download_url"
+              primary
+              wide
+              @click="onClickDownload"
+            >
+              <font-awesome-icon :icon="['fas', 'download']" fixed-width />
+              ZIP形式でダウンロード
+            </AppButton>
+          </div>
+          <div class="download-main__sub-links">
+            <a :href="latestReleaseInfo.html_url" target="_blank">
+              リリースノート
+            </a>
+            •
+            <a
+              href="https://github.com/portal-dots/PortalDots/releases"
+              target="_blank"
+            >
+              過去のバージョン
+            </a>
+          </div>
+        </AppContentTopCard>
       </AppContainer>
     </section>
     <div class="download-infos">
@@ -100,11 +102,12 @@
 <script>
 import AppContainer from '@/components/AppContainer.vue'
 import AppSubHeader from '@/components/AppSubHeader.vue'
+import AppContentTopCard from '@/components/AppContentTopCard.vue'
 import AppButton from '~/components/AppButton.vue'
 import { head } from '~/utils/head'
 
 export default {
-  components: { AppContainer, AppSubHeader, AppButton },
+  components: { AppContainer, AppSubHeader, AppContentTopCard, AppButton },
   async asyncData({ $axios }) {
     const latestReleaseInfo = await $axios.$get(
       'https://api.github.com/repos/portal-dots/PortalDots/releases/latest'
@@ -139,8 +142,12 @@ export default {
 <style lang="scss" scoped>
 .download {
   &-main {
-    padding: $spacing-xl 0;
     text-align: center;
+    margin-top: #{-$spacing-xl * 2};
+
+    &__card {
+      padding: $spacing-xl $spacing-md;
+    }
 
     &__heading {
       font-size: 1.25rem;
@@ -165,7 +172,6 @@ export default {
 
   &-infos {
     &__content {
-      border-top: 1px solid $color-border;
       padding-top: $spacing-xl;
       padding-bottom: $spacing-xl;
     }
