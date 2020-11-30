@@ -1,9 +1,5 @@
 <template>
-  <header
-    class="app-header"
-    :class="{ 'is-top': backgroundOpacity < 0.25 }"
-    :style="{ backgroundColor: `rgba(255, 255, 255, ${backgroundOpacity})` }"
-  >
+  <header class="app-header" :class="{ 'is-top': isTop }">
     <AppContainer class="app-header__container">
       <nuxt-link
         to="/"
@@ -71,7 +67,7 @@ export default {
   },
   data() {
     return {
-      backgroundOpacity: 0,
+      isTop: false,
       isOpen: false,
     }
   },
@@ -88,7 +84,7 @@ export default {
       this.$emit('toggleNav', this.isOpen)
     },
     onScroll() {
-      this.backgroundOpacity = Math.max(Math.min(window.scrollY / 300, 1), 0)
+      this.isTop = window.scrollY < 30
     },
   },
 }
@@ -102,10 +98,14 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  transition: 0.3s ease height, 0.3s ease padding, 0.1s ease background-color;
+  transition: 0.3s ease all;
   will-change: height, padding;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   &.is-top {
+    background: transparent;
+    box-shadow: none;
     height: $app-header-height-top;
     padding-top: #{($app-header-height-top - $app-header-height) / 2};
     padding-bottom: #{($app-header-height-top - $app-header-height) / 2};
