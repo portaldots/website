@@ -142,6 +142,11 @@
           <h2 class="download__heading">
             インストールは簡単！<br />いますぐPortalDotsをはじめよう
           </h2>
+          <img
+            src="@/assets/img/installer_home_screenshot.png"
+            alt="インストーラーホーム画面のスクリーンショット"
+            class="download__screenshot"
+          />
           <p class="download__lead">
             PHP(7.3以上)とMySQL(5.7以上)に対応しているレンタルサーバーにファイルを設置したら、インストーラーの指示に従うだけ。
           </p>
@@ -330,11 +335,21 @@ export default {
     linear-gradient(120deg, #{$color-primary}, #{$color-primary-2});
   padding: $spacing-xl 0;
 
+  &__screenshot {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    margin: 0 auto $spacing;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
   &__heading {
     font-size: 2rem;
     line-height: 1.4;
     text-align: center;
-    margin-top: 0;
+    margin: 0 0 $spacing;
   }
 
   &__links {
