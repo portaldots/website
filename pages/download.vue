@@ -42,7 +42,7 @@
           <section class="download-infos__col">
             <h2 class="download-infos__col__heading">動作環境</h2>
             <p class="download-infos__col__paragraph">
-              PHP 7.3以上、MySQL 5.7以上が動作するサーバーが必要です。
+              PHP 7.3以上、MySQL 5.7以上が動作するウェブサーバーが必要です。
             </p>
             <p class="download-infos__col__paragraph">
               <a href="https://www.sakura.ne.jp/" target="_blank"
