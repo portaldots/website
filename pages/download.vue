@@ -81,6 +81,10 @@
           <section class="download-infos__col">
             <h2 class="download-infos__col__heading">お問い合わせ先</h2>
             <p class="download-infos__col__paragraph">
+              LINE :
+              <a href="https://lin.ee/aeee9s9" target="_blank">@aeee9s9</a>
+            </p>
+            <p class="download-infos__col__paragraph">
               メールアドレス :
               <a href="mailto:portal-dots@hrgrweb.com"
                 >portal-dots@hrgrweb.com</a
@@ -93,8 +97,8 @@
               >
             </p>
             <p class="download-infos__col__paragraph">
-              LINE :
-              <a href="https://lin.ee/aeee9s9" target="_blank">@aeee9s9</a>
+              開発チーム代表Twitter :
+              <a href="https://twitter.com/sofpyon" target="_blank">@sofpyon</a>
             </p>
           </section>
         </div>
