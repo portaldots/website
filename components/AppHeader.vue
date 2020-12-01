@@ -7,7 +7,7 @@
         :aria-hidden="isOpen ? 'true' : 'false'"
       >
         <img
-          src="@/assets/img/logotype.svg"
+          src="@/assets/img/logotype_with_symbol.svg"
           class="app-header__logo"
           alt="PortalDots"
         />
@@ -115,8 +115,8 @@ export default {
     display: flex;
     align-items: center;
     height: 100%;
-    padding-top: $spacing-md;
-    padding-bottom: $spacing-md;
+    padding-top: $spacing-sm;
+    padding-bottom: $spacing-sm;
   }
 
   &__logo-link {
@@ -135,15 +135,14 @@ export default {
     display: flex;
     height: 100%;
     margin-left: auto;
-    align-items: center;
 
     &__item {
       display: flex;
-      height: 100%;
       padding: 0 $spacing-md;
       align-items: center;
       text-decoration: none;
       color: $color-text;
+      align-self: stretch;
 
       &.is-button {
         border: 1.5px solid $color-primary;
@@ -151,6 +150,7 @@ export default {
         border-radius: 9999px;
         font-weight: bold;
         margin-left: $spacing-md;
+        align-self: center;
       }
 
       &:hover {
