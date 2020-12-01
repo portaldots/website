@@ -9,12 +9,12 @@
                 一人ひとりの「想い」をつなぎ、学園祭を最高に楽しくする
               </h1>
               <p class="home-header__description">
-                PHPとMySQLで動作する、オープンソースの学園祭運営支援ウェブシステム。
+                PHPとMySQLで動作する、学園祭運営支援ウェブシステム。
               </p>
               <div class="home-header__actions">
-                <AppButton to="/download/" primary wide
-                  >ダウンロード(無料)</AppButton
-                >
+                <AppButton to="/download/" primary wide>
+                  ダウンロード(無料)
+                </AppButton>
                 <AppButton
                   href="https://github.com/portal-dots/PortalDots"
                   target="_blank"
