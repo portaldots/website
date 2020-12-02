@@ -56,6 +56,16 @@
               PortalDotsの開発に参加してみませんか? (GitHub)
             </a>
           </p>
+          <p>
+            <a
+              href="https://crieit.net/posts/introducing-portaldots"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <font-awesome-icon :icon="['fas', 'arrow-right']" fixed-width />
+              「大学祭の参加団体向けウェブシステムをOSS化してみた」 (Crieit)
+            </a>
+          </p>
         </AppContainer>
       </section>
       <section class="screenshots-slide">
