@@ -1,6 +1,6 @@
 <template>
   <component
-    :is="href ? 'a' : 'nuxt-link'"
+    :is="componentIs"
     :href="href ? href : undefined"
     :to="to ? to : undefined"
     class="app-button"
@@ -35,6 +35,13 @@ export default {
       default: false,
     },
   },
+  computed: {
+    componentIs() {
+      if (this.href) return 'a'
+      if (this.to) return 'nuxt-link'
+      return 'button'
+    },
+  },
   methods: {
     handleClick(e) {
       this.$emit('click', e)
@@ -45,6 +52,9 @@ export default {
 
 <style lang="scss" scoped>
 .app-button {
+  appearance: none;
+  border: none;
+  cursor: pointer;
   background: $color-bg-white;
   display: inline-block;
   padding: $spacing-sm $spacing;
