@@ -6,10 +6,10 @@
           <div class="row home-header__row">
             <div class="col-md-6">
               <h1 class="home-header__copy">
-                一人ひとりの「想い」をつなぎ、学園祭を最高に楽しくする
+                みんなでつくる、オープンソースの学園祭運営ウェブシステム。
               </h1>
               <p class="home-header__description">
-                PHPとMySQLで動作する、学園祭運営支援ウェブシステム。
+                PHPとMySQLで動作。学園祭運営ウェブシステムの開発ノウハウを、みんなで共有してみませんか？
               </p>
               <div class="home-header__actions">
                 <AppButton to="/download/" primary wide>
