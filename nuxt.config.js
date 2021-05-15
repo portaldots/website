@@ -41,7 +41,10 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/fontawesome.js', '~/plugins/vueCookieLaw.client.js'],
+  plugins: [
+    '~/plugins/fontawesome.js',
+    { src: '~/plugins/vue-matomo.js', ssr: false },
+  ],
   /*
    ** Nuxt.js dev-modules
    */

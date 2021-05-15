@@ -43,22 +43,6 @@
         </div>
       </div>
     </AppContainer>
-    <client-only>
-      <VueCookieLaw button-text="OK" button-class="cookie-button">
-        <template v-slot:message>
-          当ウェブサイトは「Google
-          アナリティクス」を利用し、匿名のトラフィックデータを収集しています。
-          閲覧を続けることにより、トラフィックデータ収集のため Cookie
-          が利用されることに同意したものとみなします。
-          <a
-            href="https://www.google.com/intl/ja/policies/privacy/partners/"
-            target="_blank"
-          >
-            Google アナリティクスでデータが収集、処理される仕組みについて
-          </a>
-        </template>
-      </VueCookieLaw>
-    </client-only>
   </footer>
 </template>
 
@@ -71,36 +55,6 @@ export default {
   },
 }
 </script>
-
-<style lang="scss">
-.Cookie--base {
-  background: $color-bg-light !important;
-  box-shadow: 0 -2px 4px rgba(#000, 0.1);
-}
-
-.Cookie__content {
-  margin: 0 !important;
-}
-
-.cookie-button {
-  appearance: none;
-  border: none;
-  cursor: pointer;
-  background: $color-primary;
-  display: inline-block;
-  padding: $spacing-sm $spacing-lg;
-  text-decoration: none;
-  color: $color-bg-white;
-  font-weight: bold;
-  border-radius: 0.4rem;
-  box-shadow: 0 0.2rem 0.8rem rgba($color-primary, 0.2);
-  transition: 0.25s ease all;
-
-  &:hover {
-    box-shadow: 0 0.4rem 1rem rgba($color-primary, 0.4);
-  }
-}
-</style>
 
 <style lang="scss" scoped>
 .app-footer {

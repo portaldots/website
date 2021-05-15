@@ -29,7 +29,6 @@
     "bootstrap": "^4.5.2",
     "nuxt": "^2.14.0",
     "vue-carousel": "^0.18.0",
-    "vue-cookie-law": "^1.13.3",
     "vue-matomo": "^4.0.0"
   },
   "devDependencies": {
