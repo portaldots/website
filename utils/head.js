@@ -1,7 +1,7 @@
 export const head = (title, description, imageUrl) => {
   const metaDescription =
     description ||
-    '学園祭実行委員会と参加企画との間のコミュニケーションを支援するオープンソースウェブシステム。参加団体向けウェブサイトの構築が可能。 — 「想い」を伝える。「想い」を集める。「想い」をつなげる。'
+    'PortalDots〈ポータルドット〉は、ログイン機能や参加登録機能、申請フォーム機能を備えた学園祭運営支援ウェブシステムです。オープンソースなので、それぞれの学園祭の運営方法に合わせてカスタマイズすることができます。'
 
   return {
     title: title ? `${title} - PortalDots` : 'PortalDots〈ポータルドット〉',

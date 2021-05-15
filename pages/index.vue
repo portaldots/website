@@ -9,7 +9,7 @@
                 みんなでつくる、オープンソースの学園祭運営ウェブシステム。
               </h1>
               <p class="home-header__description">
-                PHPとMySQLで動作。学園祭運営ウェブシステムの開発ノウハウを、みんなで共有してみませんか？
+                PHPとMySQLで動作。実際の学園祭運営を通じて培った開発ノウハウを、オープンソースにしました。
               </p>
               <div class="home-header__actions">
                 <AppButton to="/download/" primary wide>
