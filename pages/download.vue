@@ -131,11 +131,12 @@ export default {
       return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i]
     },
     onClickDownload() {
-      this.$ga.event({
-        eventCategory: 'Downloads',
-        eventAction: 'Release ZIP',
-        eventLabel: this.latestReleaseInfo.name,
-      })
+      window._paq.push([
+        'trackEvent',
+        'Downloads',
+        'Download Release Zip',
+        this.latestReleaseInfo.name,
+      ])
     },
   },
   head() {
