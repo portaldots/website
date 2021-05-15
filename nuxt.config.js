@@ -41,7 +41,10 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/fontawesome.js', '~/plugins/vueCookieLaw.client.js'],
+  plugins: [
+    '~/plugins/fontawesome.js',
+    { src: '~/plugins/vue-matomo.js', ssr: false },
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -52,7 +55,6 @@ export default {
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
-    '@nuxtjs/google-analytics',
   ],
   eslint: {
     fix: true,
@@ -62,9 +64,6 @@ export default {
   },
   styleResources: {
     scss: ['./assets/scss/_variables.scss'],
-  },
-  googleAnalytics: {
-    id: 'UA-39733737-19',
   },
   /*
    ** Nuxt.js modules
