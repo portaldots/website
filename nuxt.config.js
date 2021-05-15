@@ -63,9 +63,6 @@ export default {
   styleResources: {
     scss: ['./assets/scss/_variables.scss'],
   },
-  googleAnalytics: {
-    id: 'UA-39733737-19',
-  },
   /*
    ** Nuxt.js modules
    */
