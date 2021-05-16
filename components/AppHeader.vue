@@ -1,5 +1,5 @@
 <template>
-  <header class="app-header" :class="{ 'is-top': isTop }">
+  <header class="app-header" :class="{ 'is-not-top': !isTop }">
     <AppContainer class="app-header__container">
       <nuxt-link
         to="/"
@@ -67,7 +67,7 @@ export default {
   },
   data() {
     return {
-      isTop: false,
+      isTop: true,
       isOpen: false,
     }
   },
@@ -92,7 +92,9 @@ export default {
 
 <style lang="scss" scoped>
 .app-header {
-  height: $app-header-height;
+  padding-top: #{($app-header-height-top - $app-header-height) / 2};
+  padding-bottom: #{($app-header-height-top - $app-header-height) / 2};
+  height: $app-header-height-top;
   z-index: $z-index-app-header;
   position: fixed;
   top: 0;
@@ -100,15 +102,12 @@ export default {
   right: 0;
   transition: 0.3s ease all;
   will-change: height, padding;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-  &.is-top {
-    background: transparent;
-    box-shadow: none;
-    height: $app-header-height-top;
-    padding-top: #{($app-header-height-top - $app-header-height) / 2};
-    padding-bottom: #{($app-header-height-top - $app-header-height) / 2};
+  &.is-not-top {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: $app-header-height;
+    padding: 0;
   }
 
   &__container {
@@ -170,11 +169,9 @@ export default {
   }
 
   @media screen and (max-width: 767.5px) {
-    &.is-top {
-      height: $app-header-height;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
+    height: $app-header-height;
+    padding-top: 0;
+    padding-bottom: 0;
 
     &__nav {
       visibility: hidden;

@@ -13,7 +13,7 @@
               </p>
               <div class="home-header__actions">
                 <AppButton to="/download/" primary wide>
-                  ダウンロード(無料)
+                  <span style="color: white">ダウンロード(無料)</span>
                 </AppButton>
                 <AppButton
                   href="https://github.com/portal-dots/PortalDots"
