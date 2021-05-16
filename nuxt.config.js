@@ -68,7 +68,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxt/content', '@nuxtjs/axios'],
   /*
    ** Build configuration
    */
