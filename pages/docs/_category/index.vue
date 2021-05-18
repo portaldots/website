@@ -10,21 +10,7 @@
         <DocsArticleItem
           v-for="article in articles"
           :key="article.slug"
-          :to="`${article.path}/`"
-          :title="article.title"
-          :description="article.description"
-        />
-        <DocsArticleItem
-          v-for="article in articles"
-          :key="article.slug"
-          :to="`${article.path}/`"
-          :title="article.title"
-          :description="article.description"
-        />
-        <DocsArticleItem
-          v-for="article in articles"
-          :key="article.slug"
-          :to="`${article.path}/`"
+          :to="`/docs/${categoryInfo.slug}/${article.slug}/`"
           :title="article.title"
           :description="article.description"
         />
@@ -61,7 +47,7 @@ export default {
 <style lang="scss" scoped>
 .docs-category {
   &__content {
-    margin-top: #{-$spacing-xl * 2};
+    margin-top: #{-$spacing-xl};
   }
 }
 </style>

@@ -60,7 +60,7 @@ export default {
   }
 
   &__wrap {
-    padding: $spacing 0 #{$spacing-xl * 3};
+    padding: $spacing 0 #{$spacing-xl * 2};
 
     @media screen and (max-width: 767.5px) {
       padding: $spacing-s 0 #{$spacing-xl * 2.5};
