@@ -28,7 +28,6 @@
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/axios": "^5.12.2",
     "@tailwindcss/typography": "^0.4.0",
-    "bootstrap": "^4.5.2",
     "nuxt": "^2.14.0",
     "vue-carousel": "^0.18.0",
     "vue-matomo": "^4.0.0"
