@@ -11,7 +11,7 @@
           <DocsCategoryItem
             v-for="article in articles"
             :key="article.slug"
-            :to="`${article.path}/`"
+            :to="`/docs/${article.slug}/`"
             :title="article.title"
             :emoji="article.emoji"
             :description="article.description"
