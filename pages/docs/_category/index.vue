@@ -1,37 +1,33 @@
 <template>
-  <div class="docs-category">
-    <div class="docs-category__bg" />
-    <AppContainer class="relative z-10">
-      <div class="rounded-md p-5 bg-white shadow-md">
-        <DocsCategoryHeader
-          :emoji="categoryInfo.emoji"
-          :title="categoryInfo.title"
-          :description="categoryInfo.description"
+  <div>
+    <DocsCategoryHeader
+      :emoji="categoryInfo.emoji"
+      :title="categoryInfo.title"
+      :description="categoryInfo.description"
+    />
+    <AppContainer class="relative z-10 docs-category__content">
+      <div class="rounded-md bg-white shadow-md overflow-hidden">
+        <DocsArticleItem
+          v-for="article in articles"
+          :key="article.slug"
+          :to="`${article.path}/`"
+          :title="article.title"
+          :description="article.description"
         />
-
-        <div class="grid grid-cols-1 gap-6">
-          <DocsArticleItem
-            v-for="article in articles"
-            :key="article.slug"
-            :to="`${article.path}/`"
-            :title="article.title"
-            :description="article.description"
-          />
-          <DocsArticleItem
-            v-for="article in articles"
-            :key="article.slug"
-            :to="`${article.path}/`"
-            :title="article.title"
-            :description="article.description"
-          />
-          <DocsArticleItem
-            v-for="article in articles"
-            :key="article.slug"
-            :to="`${article.path}/`"
-            :title="article.title"
-            :description="article.description"
-          />
-        </div>
+        <DocsArticleItem
+          v-for="article in articles"
+          :key="article.slug"
+          :to="`${article.path}/`"
+          :title="article.title"
+          :description="article.description"
+        />
+        <DocsArticleItem
+          v-for="article in articles"
+          :key="article.slug"
+          :to="`${article.path}/`"
+          :title="article.title"
+          :description="article.description"
+        />
       </div>
     </AppContainer>
   </div>
@@ -64,20 +60,8 @@ export default {
 
 <style lang="scss" scoped>
 .docs-category {
-  padding-top: $app-header-height-top;
-  position: relative;
-  z-index: 1;
-
-  &__bg {
-    content: '';
-    position: absolute;
-    z-index: 2;
-    background: linear-gradient(to bottom, rgba(#fff, 0.9), rgba(#fff, 0.9)),
-      linear-gradient(120deg, #{$color-primary}, #{$color-primary-2});
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 12rem;
+  &__content {
+    margin-top: #{-$spacing-xl * 2};
   }
 }
 </style>

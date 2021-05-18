@@ -1,10 +1,12 @@
 <template>
   <nuxt-link
     :to="to"
-    class="block text-gray-800 bg-gray-50 hover:bg-gray-100 border border-gray-100 p-5 md:p-8 rounded-md hover:no-underline hover:text-gray-800 transition duration-200"
+    class="block text-gray-800 hover:bg-gray-50 px-7 hover:no-underline hover:text-gray-800 relative"
   >
-    <div class="text-xl font-bold mb-2">{{ title }}</div>
-    <div class="text-gray-500">{{ description }}</div>
+    <div class="border-b border-gray-200 py-7">
+      <div class="text-xl font-bold mb-1">{{ title }}</div>
+      <div class="text-gray-500">{{ description }}</div>
+    </div>
   </nuxt-link>
 </template>
 
