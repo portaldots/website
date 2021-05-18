@@ -5,7 +5,9 @@
     <section class="download-main">
       <AppContainer small>
         <AppContentTopCard class="download-main__card">
-          <h2 class="download-main__heading">最新バージョンはこちら</h2>
+          <h2 class="download-main__heading font-bold">
+            最新バージョンはこちら
+          </h2>
           <p class="download-main__lead">
             {{ latestReleaseInfo.name }} •
             {{ bytesToSize(latestReleaseInfo.assets[0].size) }}
@@ -40,7 +42,7 @@
       <AppContainer small class="download-infos__content">
         <div class="download-infos__row">
           <section class="download-infos__col">
-            <h2 class="download-infos__col__heading">動作環境</h2>
+            <h2 class="download-infos__col__heading font-bold">動作環境</h2>
             <p class="download-infos__col__paragraph">
               PHP 7.3以上、MySQL 5.7以上が動作するウェブサーバーが必要です。
             </p>
@@ -52,7 +54,9 @@
             </p>
           </section>
           <section class="download-infos__col">
-            <h2 class="download-infos__col__heading">セットアップ方法</h2>
+            <h2 class="download-infos__col__heading font-bold">
+              セットアップ方法
+            </h2>
             <p class="download-infos__col__paragraph">
               まず、サーバー上でMySQLデータベースを作成してください。その後、ダウンロードしたZIPファイルの中身をサーバーへアップロードしてください。
             </p>
@@ -63,7 +67,7 @@
         </div>
         <div class="download-infos__row">
           <section class="download-infos__col">
-            <h2 class="download-infos__col__heading">
+            <h2 class="download-infos__col__heading font-bold">
               セットアップの方法がわからない！
             </h2>
             <p class="download-infos__col__paragraph">
@@ -79,7 +83,9 @@
             </p>
           </section>
           <section class="download-infos__col">
-            <h2 class="download-infos__col__heading">お問い合わせ先</h2>
+            <h2 class="download-infos__col__heading font-bold">
+              お問い合わせ先
+            </h2>
             <p class="download-infos__col__paragraph">
               LINE :
               <a href="https://lin.ee/aeee9s9" target="_blank">@aeee9s9</a>

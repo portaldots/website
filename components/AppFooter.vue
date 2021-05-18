@@ -2,10 +2,10 @@
   <footer class="app-footer">
     <AppContainer>
       <div class="app-footer__content">
-        <div class="row app-footer__row">
-          <div class="col-md-4">© PortalDots Dev Team</div>
-          <div class="col-md-4"></div>
-          <div class="col-md-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 items-center">
+          <div>© PortalDots Dev Team</div>
+          <div></div>
+          <div>
             <ul class="app-footer__social" aria-label="ソーシャルメディア">
               <li class="app-footer__social__listitem">
                 <a
@@ -69,10 +69,6 @@ export default {
   &__content {
     padding-top: $spacing-lg;
     padding-bottom: $spacing-lg;
-  }
-
-  &__row {
-    align-items: center;
   }
 
   &__social {
