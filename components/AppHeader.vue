@@ -32,10 +32,10 @@
         @click="toggle"
       >
         <nuxt-link to="/" class="app-header__nav__item">ホーム</nuxt-link>
-        <!-- <nuxt-link to="/" class="app-header__nav__item">
-          使い方ガイド
+        <nuxt-link to="/docs/" class="app-header__nav__item">
+          マニュアル
         </nuxt-link>
-        <nuxt-link to="/" class="app-header__nav__item">
+        <!-- <nuxt-link to="/" class="app-header__nav__item">
           お問い合わせ
         </nuxt-link> -->
         <a
