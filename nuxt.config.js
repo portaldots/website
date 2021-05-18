@@ -69,7 +69,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxt/content', '@nuxtjs/axios'],
+  modules: ['@nuxt/content', '@nuxtjs/axios', '@nuxtjs/tailwindcss'],
   /*
    ** Build configuration
    */
