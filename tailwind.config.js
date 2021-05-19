@@ -27,6 +27,8 @@ module.exports = {
               marginLeft: 'auto',
               marginRight: 'auto',
               borderRadius: '0.25rem',
+              borderColor: theme('colors.gray.200'),
+              borderWidth: '1px',
             },
           },
         },
