@@ -1,37 +1,32 @@
 <template>
   <header class="docs-category-header">
-    <div class="docs-category-header__wrap">
-      <AppContainer>
-        <nuxt-link
-          to="/docs/"
-          class="inline-block px-2 py-1 -mx-2 -my-1 mb-3 rounded hover:no-underline hover:bg-white transition"
-        >
-          <font-awesome-icon :icon="['fas', 'arrow-left']" class="mr-1" />
-          マニュアル
-        </nuxt-link>
-        <div class="pt-5 flex flex-col md:flex-row items-center justify-center">
-          <div class="flex-none flex justify-center">
-            <div
-              class="w-24 h-24 flex items-center justify-center text-5xl md:border-r border-gray-300"
-            >
-              {{ emoji }}
-            </div>
-          </div>
-          <div class="w-6 h-3" />
-          <div class="flex-grow text-center md:text-left">
-            <h1 class="text-3xl font-bold">{{ title }}</h1>
-            <p v-if="description" class="md:text-xl mt-3 text-gray-600">
-              {{ description }}
-            </p>
+    <AppContainer class="pt-3 pb-24">
+      <AppBackButton to="/docs/" label="マニュアル" />
+      <div class="pt-5 flex flex-col md:flex-row items-center justify-center">
+        <div class="flex-none flex justify-center">
+          <div
+            class="w-24 h-24 flex items-center justify-center text-5xl md:border-r border-gray-300"
+          >
+            {{ emoji }}
           </div>
         </div>
-      </AppContainer>
-    </div>
+        <div class="w-6 h-3" />
+        <div class="flex-grow text-center md:text-left">
+          <h1 class="text-3xl font-bold">{{ title }}</h1>
+          <p v-if="description" class="md:text-xl mt-3 text-gray-600">
+            {{ description }}
+          </p>
+        </div>
+      </div>
+    </AppContainer>
   </header>
 </template>
 
 <script>
+import AppBackButton from './AppBackButton.vue'
+
 export default {
+  components: { AppBackButton },
   props: {
     emoji: {
       type: String,
@@ -57,14 +52,6 @@ export default {
 
   @media screen and (max-width: 767.5px) {
     padding: $app-header-height 0 0;
-  }
-
-  &__wrap {
-    padding: $spacing 0 #{$spacing-xl * 2};
-
-    @media screen and (max-width: 767.5px) {
-      padding: $spacing-s 0 #{$spacing-xl * 2.5};
-    }
   }
 }
 </style>

@@ -53,6 +53,7 @@
               href="https://github.com/portal-dots/PortalDots/blob/master/CONTRIBUTING.md"
               target="_blank"
               rel="noopener noreferrer"
+              class="text-blue-500 hover:text-blue-600 hover:underline"
             >
               <font-awesome-icon :icon="['fas', 'arrow-right']" fixed-width />
               PortalDotsの開発に参加してみませんか? (GitHub)
@@ -63,6 +64,7 @@
               href="https://crieit.net/posts/introducing-portaldots"
               target="_blank"
               rel="noopener noreferrer"
+              class="text-blue-500 hover:text-blue-600 hover:underline"
             >
               <font-awesome-icon :icon="['fas', 'arrow-right']" fixed-width />
               「大学祭の参加団体向けウェブシステムをOSS化してみた」 (Crieit)

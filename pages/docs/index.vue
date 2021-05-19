@@ -7,14 +7,14 @@
 
     <section class="docs-main">
       <AppContainer>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <DocsCategoryItem
-            v-for="article in articles"
-            :key="article.slug"
-            :to="`/docs/${article.slug}/`"
-            :title="article.title"
-            :emoji="article.emoji"
-            :description="article.description"
+            v-for="category in categories"
+            :key="category.slug"
+            :to="`/docs/${category.slug}/`"
+            :title="category.title"
+            :emoji="category.emoji"
+            :description="category.description"
           />
         </div>
       </AppContainer>
@@ -27,12 +27,12 @@ import { head } from '~/utils/head'
 
 export default {
   async asyncData({ $content }) {
-    const articles = await $content('docs')
+    const categories = await $content('docs', '_categories')
       .only(['title', 'emoji', 'description', 'slug'])
       .fetch()
 
     return {
-      articles,
+      categories,
     }
   },
   head() {

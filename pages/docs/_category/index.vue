@@ -24,10 +24,11 @@ import { head } from '~/utils/head'
 
 export default {
   async asyncData({ $content, params }) {
-    const categoryInfo = (
-      await $content('docs').where('slug', params.category).fetch()
-    )[0]
-
+    const categoryInfo = await $content(
+      'docs',
+      '_categories',
+      params.category
+    ).fetch()
     const articles = await $content('docs', params.category).fetch()
 
     return {

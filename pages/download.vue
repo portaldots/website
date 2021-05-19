@@ -24,13 +24,18 @@
             </AppButton>
           </div>
           <div class="download-main__sub-links">
-            <a :href="latestReleaseInfo.html_url" target="_blank">
+            <a
+              :href="latestReleaseInfo.html_url"
+              target="_blank"
+              class="text-blue-500 hover:text-blue-600 hover:underline"
+            >
               リリースノート
             </a>
             •
             <a
               href="https://github.com/portal-dots/PortalDots/releases"
               target="_blank"
+              class="text-blue-500 hover:text-blue-600 hover:underline"
             >
               過去のバージョン
             </a>
@@ -47,7 +52,10 @@
               PHP 7.3以上、MySQL 5.7以上が動作するウェブサーバーが必要です。
             </p>
             <p class="download-infos__col__paragraph">
-              <a href="https://www.sakura.ne.jp/" target="_blank"
+              <a
+                href="https://www.sakura.ne.jp/"
+                target="_blank"
+                class="text-blue-500 hover:text-blue-600 hover:underline"
                 >さくらのレンタルサーバ</a
               >
               スタンダードプランでの動作を確認しています。
@@ -71,7 +79,10 @@
               セットアップの方法がわからない！
             </h2>
             <p class="download-infos__col__paragraph">
-              <a href="https://lin.ee/aeee9s9" target="_blank"
+              <a
+                href="https://lin.ee/aeee9s9"
+                target="_blank"
+                class="text-blue-500 hover:text-blue-600 hover:underline"
                 >PortalDots の LINE 公式アカウント</a
               >
               では、PortalDots
@@ -88,23 +99,38 @@
             </h2>
             <p class="download-infos__col__paragraph">
               LINE :
-              <a href="https://lin.ee/aeee9s9" target="_blank">@aeee9s9</a>
+              <a
+                href="https://lin.ee/aeee9s9"
+                target="_blank"
+                class="text-blue-500 hover:text-blue-600 hover:underline"
+                >@aeee9s9</a
+              >
             </p>
             <p class="download-infos__col__paragraph">
               メールアドレス :
-              <a href="mailto:portal-dots@hrgrweb.com"
+              <a
+                href="mailto:portal-dots@hrgrweb.com"
+                class="text-blue-500 hover:text-blue-600 hover:underline"
                 >portal-dots@hrgrweb.com</a
               >
             </p>
             <p class="download-infos__col__paragraph">
               Twitter :
-              <a href="https://twitter.com/PortalDots" target="_blank"
+              <a
+                href="https://twitter.com/PortalDots"
+                target="_blank"
+                class="text-blue-500 hover:text-blue-600 hover:underline"
                 >@PortalDots</a
               >
             </p>
             <p class="download-infos__col__paragraph">
               開発チーム代表Twitter :
-              <a href="https://twitter.com/sofpyon" target="_blank">@sofpyon</a>
+              <a
+                href="https://twitter.com/sofpyon"
+                target="_blank"
+                class="text-blue-500 hover:text-blue-600 hover:underline"
+                >@sofpyon</a
+              >
             </p>
           </section>
         </div>
