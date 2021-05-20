@@ -82,7 +82,7 @@ export default {
   },
   watch: {
     scrollY(newVal, oldVal) {
-      if (this.isOpen) {
+      if (this.isOpen || !oldVal) {
         return
       }
 
@@ -96,6 +96,7 @@ export default {
   mounted() {
     this.onScroll()
     window.addEventListener('scroll', this.onScroll)
+    this.isOpen = false
   },
   destroyed() {
     window.removeEventListener('scroll', this.onScroll)
