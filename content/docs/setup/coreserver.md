@@ -1,6 +1,7 @@
 ---
 title: コアサーバーに PortalDotsをインストールする
 description: コアサーバーに PortalDotsをインストールする方法をご説明します。
+priority: 2
 ---
 
 <docs-alert type="info">

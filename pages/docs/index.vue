@@ -29,6 +29,7 @@ export default {
   async asyncData({ $content }) {
     const categories = await $content('docs', '_categories')
       .only(['title', 'emoji', 'description', 'slug'])
+      .sortBy('priority', 'asc')
       .fetch()
 
     return {

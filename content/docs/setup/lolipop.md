@@ -1,6 +1,7 @@
 ---
 title: ロリポップ！レンタルサーバーに PortalDotsをインストールする
 description: ロリポップ！レンタルサーバーに PortalDotsをインストールする方法をご説明します。
+priority: 1
 ---
 
 <docs-alert type="info">

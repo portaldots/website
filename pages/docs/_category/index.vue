@@ -29,7 +29,9 @@ export default {
       '_categories',
       params.category
     ).fetch()
-    const articles = await $content('docs', params.category).fetch()
+    const articles = await $content('docs', params.category)
+      .sortBy('priority', 'asc')
+      .fetch()
 
     return {
       categoryInfo,
