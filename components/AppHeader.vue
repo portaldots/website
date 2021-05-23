@@ -1,8 +1,5 @@
 <template>
-  <header
-    class="app-header"
-    :class="{ 'is-not-top': !isTop, 'is-hide': isHide }"
-  >
+  <header class="app-header" :class="{ 'is-not-top': !isTop }">
     <AppContainer class="app-header__container">
       <nuxt-link
         to="/"
@@ -70,28 +67,9 @@ export default {
   },
   data() {
     return {
-      scrollY: 0,
       isTop: true,
       isOpen: false,
     }
-  },
-  computed: {
-    isHide() {
-      return this.$store.state.header.isHide
-    },
-  },
-  watch: {
-    scrollY(newVal, oldVal) {
-      if (this.isOpen || !oldVal) {
-        return
-      }
-
-      if (newVal > oldVal) {
-        this.$store.commit('header/changeIsHide', true)
-      } else if (newVal < oldVal) {
-        this.$store.commit('header/changeIsHide', false)
-      }
-    },
   },
   mounted() {
     this.onScroll()
@@ -104,11 +82,9 @@ export default {
   methods: {
     toggle() {
       this.isOpen = !this.isOpen
-      this.$store.commit('header/changeIsHide', false)
       this.$emit('toggleNav', this.isOpen)
     },
     onScroll() {
-      this.scrollY = window.scrollY
       this.isTop = window.scrollY < 30
     },
   },

@@ -11,10 +11,21 @@
       <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-6">
         <article class="rounded-md bg-white shadow-md p-8 md:p-12 col-span-2">
           <header class="pb-8">
-            <h1 class="text-3xl font-bold mb-3 leading-normal">
+            <p>
+              <a
+                :href="githubMarkdownUrl"
+                class="text-gray-600 hover:underline"
+              >
+                <font-awesome-icon
+                  :icon="['fas', 'edit']"
+                  class="mr-1 text-gray-400"
+                />修正を提案
+              </a>
+            </p>
+            <h1 class="text-3xl font-bold mt-3 leading-normal">
               {{ page.title }}
             </h1>
-            <p class="text-lg md:text-xl text-gray-500 leading-relaxed">
+            <p class="text-lg md:text-xl text-gray-500 leading-relaxed mt-3">
               {{ page.description }}
             </p>
           </header>
@@ -23,29 +34,47 @@
           </div>
         </article>
         <div class="col-span-1 hidden lg:block">
-          <div
-            class="sticky transition-all duration-300 h-screen pb-32"
-            :class="isHeaderHide ? 'top-8' : 'top-24'"
-          >
-            <div
-              class="rounded-md bg-white border border-gray-100 shadow-md p-8 max-h-full overflow-y-auto"
-            >
-              <ul class="list-disc text-gray-300 pl-5">
-                <li
-                  v-for="link of page.toc"
-                  :key="link.id"
-                  class="my-1"
-                  :class="{ 'ml-5': link.depth === 3 }"
+          <div class="sticky h-screen -top-4 -mt-24 bottom-0">
+            <div class="h-20" />
+            <div class="overflow-y-auto max-h-full pt-4 pb-32">
+              <div
+                class="rounded-md bg-white border border-gray-100 shadow-md py-4 px-8"
+              >
+                <scrollactive active-class="text-gray-800" :offset="80">
+                  <ul class="list-disc pl-5 docs-article__toc-list">
+                    <li
+                      v-for="link of page.toc"
+                      :key="link.id"
+                      class="my-2 text-gray-500 leading-snug text-sm"
+                      :class="{
+                        'font-bold': link.depth === 2,
+                        'ml-5': link.depth === 3,
+                      }"
+                    >
+                      <a
+                        :href="`#${link.id}`"
+                        class="hover:underline scrollactive-item"
+                      >
+                        {{ link.text }}
+                      </a>
+                    </li>
+                  </ul>
+                </scrollactive>
+              </div>
+              <div
+                class="rounded-md bg-white border border-gray-100 shadow-md p-2 mt-4"
+              >
+                <a
+                  :href="githubMarkdownUrl"
+                  class="block text-gray-600 px-6 py-2 rounded-md hover:bg-gray-100"
                 >
-                  <a
-                    :href="`#${link.id}`"
-                    class="text-gray-500 hover:text-blue-600 hover:underline"
-                    @click="handleClickTocLink"
-                  >
-                    {{ link.text }}
-                  </a>
-                </li>
-              </ul>
+                  <font-awesome-icon
+                    :icon="['fas', 'edit']"
+                    class="mr-1 text-gray-400"
+                  />
+                  内容の修正をGitHubで提案する
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -75,16 +104,8 @@ export default {
     }
   },
   computed: {
-    isHeaderHide() {
-      return this.$store.state.header.isHide
-    },
-  },
-  methods: {
-    handleClickTocLink() {
-      window.setTimeout(
-        () => this.$store.commit('header/changeIsHide', true),
-        0
-      )
+    githubMarkdownUrl() {
+      return `https://github.com/portal-dots/website/blob/main/content/docs/${this.$route.params.category}/${this.$route.params.slug}.md`
     },
   },
   head() {
