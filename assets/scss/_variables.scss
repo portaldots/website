@@ -1,14 +1,6 @@
 // Font Family
 $font-family: Inter, 'Noto Sans JP', sans-serif;
 
-// Font Size
-$base-font-size-px: 15;
-$base-font-size: #{$base-font-size-px + 'px'};
-$font-size: #{(16 / $base-font-size-px) + 'rem'};
-// inputのフォントサイズは16px以上にしないと、フォーカス時 iOS デバイスで
-// ズームしてしまう
-$font-size-input: #{(16 / $base-font-size-px) + 'rem'};
-
 // Color
 $color-text: #22292f;
 $color-primary: #1879f4;

@@ -2,7 +2,13 @@
   <header class="app-sub-header">
     <div class="app-sub-header__wrap">
       <AppContainer>
-        <h1 class="app-sub-header__title">{{ title }}</h1>
+        <h1 class="app-sub-header__title font-bold">{{ title }}</h1>
+        <p
+          v-if="description"
+          class="text-center md:text-xl mt-1 md:mt-2 text-gray-800"
+        >
+          {{ description }}
+        </p>
       </AppContainer>
     </div>
   </header>
@@ -19,6 +25,10 @@ export default {
     title: {
       type: String,
       required: true,
+    },
+    description: {
+      type: String,
+      default: null,
     },
   },
 }

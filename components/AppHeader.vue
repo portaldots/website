@@ -32,10 +32,10 @@
         @click="toggle"
       >
         <nuxt-link to="/" class="app-header__nav__item">ホーム</nuxt-link>
-        <!-- <nuxt-link to="/" class="app-header__nav__item">
-          使い方ガイド
+        <nuxt-link to="/docs/" class="app-header__nav__item">
+          マニュアル
         </nuxt-link>
-        <nuxt-link to="/" class="app-header__nav__item">
+        <!-- <nuxt-link to="/" class="app-header__nav__item">
           お問い合わせ
         </nuxt-link> -->
         <a
@@ -74,6 +74,7 @@ export default {
   mounted() {
     this.onScroll()
     window.addEventListener('scroll', this.onScroll)
+    this.isOpen = false
   },
   destroyed() {
     window.removeEventListener('scroll', this.onScroll)
@@ -102,6 +103,10 @@ export default {
   right: 0;
   transition: 0.3s ease all;
   will-change: height, padding;
+
+  &.is-hide {
+    transform: translateY(-100%);
+  }
 
   &.is-not-top {
     background: #fff;

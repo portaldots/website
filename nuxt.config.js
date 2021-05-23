@@ -1,6 +1,6 @@
 export default {
-  mode: 'universal',
   target: 'static',
+  components: true,
   /*
    ** Headers of the page
    */
@@ -44,6 +44,7 @@ export default {
   plugins: [
     '~/plugins/fontawesome.js',
     { src: '~/plugins/vue-matomo.js', ssr: false },
+    '~/plugins/vue-scrollactive.js',
   ],
   /*
    ** Nuxt.js dev-modules
@@ -68,7 +69,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxt/content', '@nuxtjs/axios', '@nuxtjs/tailwindcss'],
   /*
    ** Build configuration
    */
