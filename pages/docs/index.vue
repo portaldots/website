@@ -15,6 +15,7 @@
             :title="category.title"
             :emoji="category.emoji"
             :description="category.description"
+            :coming-soon="category.comingSoon"
           />
         </div>
       </AppContainer>
@@ -28,7 +29,7 @@ import { head } from '~/utils/head'
 export default {
   async asyncData({ $content }) {
     const categories = await $content('docs', '_categories')
-      .only(['title', 'emoji', 'description', 'slug'])
+      .only(['title', 'emoji', 'description', 'slug', 'comingSoon'])
       .sortBy('priority', 'asc')
       .fetch()
 
