@@ -1,7 +1,10 @@
 <template>
-  <div class="p-5 my-5 border-l-4 flex items-center" :class="stylingClassName">
-    <font-awesome-icon :icon="icon" class="opacity-50" size="lg" fixed-width />
-    <div class="pl-5">
+  <div
+    class="p-5 my-3 lg:my-5 border-l-4 flex items-center"
+    :class="stylingClassName"
+  >
+    <font-awesome-icon :icon="icon" class="opacity-50" fixed-width />
+    <div class="pl-4">
       <slot />
     </div>
   </div>

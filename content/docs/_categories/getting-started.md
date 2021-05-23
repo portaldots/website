@@ -1,6 +1,6 @@
 ---
-title: PortalDotsのキホン
+title: PortalDots を使いはじめる
 emoji: 🚀
-description: PortalDotsの機能や、PortalDotsを使った学園祭運営の流れをご紹介します。
+description: PortalDotsを使った学園祭運営の流れや、PortalDotsの基本機能をご紹介します。
 priority: 2
 ---
