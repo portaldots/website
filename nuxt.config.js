@@ -44,6 +44,7 @@ export default {
   plugins: [
     '~/plugins/fontawesome.js',
     { src: '~/plugins/vue-matomo.js', ssr: false },
+    '~/plugins/vue-scrollactive.js',
   ],
   /*
    ** Nuxt.js dev-modules
