@@ -9,6 +9,9 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            a: {
+              wordBreak: 'break-all',
+            },
             h2: {
               borderTopColor: theme('colors.gray.200'),
               borderTopWidth: '1px',
