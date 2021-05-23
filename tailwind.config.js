@@ -1,4 +1,5 @@
 const tailwindTypography = require('@tailwindcss/typography')
+const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   mode: 'jit',
@@ -41,5 +42,25 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [tailwindTypography],
+  plugins: [
+    tailwindTypography,
+    plugin(
+      ({ addUtilities, theme, e }) => {
+        const values = theme('colCount')
+
+        const utilities = values.map((value) => {
+          return {
+            [`.${e(`col-count-${value}`)}`]: { columnCount: `${value}` },
+          }
+        })
+
+        addUtilities(utilities)
+      },
+      {
+        theme: {
+          colCount: [2],
+        },
+      }
+    ),
+  ],
 }

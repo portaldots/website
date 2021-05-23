@@ -7,7 +7,9 @@
     />
     <div class="mb-10">
       <AppContainer class="relative z-10 docs-category__content">
-        <div class="rounded-md bg-white shadow-md overflow-hidden px-10">
+        <div
+          class="rounded-md bg-white shadow-md overflow-hidden px-6 md:px-12"
+        >
           <!-- <DocsArticleItem
             v-for="article in articles"
             :key="article.slug"
@@ -19,20 +21,19 @@
           <section
             v-for="subCategory in subCategories"
             :key="subCategory.path"
-            class="py-10 border-b border-gray-200 last:border-none"
+            class="py-6 lg:py-12 border-b border-gray-200 last:border-none"
           >
-            <h2 class="text-xl font-bold">{{ subCategory.title }}</h2>
-            <ul class="list-disc pl-5">
+            <h2 class="text-xl font-bold mb-2">{{ subCategory.title }}</h2>
+            <ul class="list-disc pl-5 lg:col-count-2">
               <li
                 v-for="article in articles.filter((article) => {
                   return article.subCategory === subCategory.subCategory
                 })"
                 :key="article.path"
-                class="mt-3"
               >
                 <nuxt-link
                   :to="`${article.path}/`"
-                  class="text-blue-600 hover:underline"
+                  class="text-blue-600 hover:underline block py-1 leading-normal"
                 >
                   {{ article.title }}
                 </nuxt-link>
@@ -67,8 +68,6 @@ export default {
       .sortBy('priority', 'asc')
       .where({ slug: '_meta' })
       .fetch()
-
-    console.log(articles)
 
     return {
       categoryInfo,

@@ -12,7 +12,7 @@
         <article
           class="rounded-md bg-white shadow-md p-4 md:p-12 col-span-2 mb-10"
         >
-          <header class="pb-8">
+          <header class="pb-3 lg:pb-8">
             <p>
               <a
                 :href="githubMarkdownUrl"
@@ -30,12 +30,43 @@
             <p class="text-lg lg:text-xl text-gray-500 leading-normal mt-3">
               {{ page.description }}
             </p>
+
+            <details
+              v-if="page.toc && page.toc.length > 0"
+              class="rounded-md bg-white border border-gray-200 mt-5 overflow-hidden"
+            >
+              <summary class="px-4 py-3 bg-gray-50 text-sm cursor-pointer">
+                このページの目次
+              </summary>
+              <div class="px-4 py-3 border-t border-gray-200">
+                <scrollactive active-class="text-gray-800" :offset="80">
+                  <ul class="list-disc pl-5">
+                    <li
+                      v-for="link of page.toc"
+                      :key="link.id"
+                      class="my-2 text-gray-500 leading-snug text-sm"
+                      :class="{
+                        'font-bold': link.depth === 2,
+                        'ml-5': link.depth === 3,
+                      }"
+                    >
+                      <a
+                        :href="`#${link.id}`"
+                        class="hover:underline scrollactive-item"
+                      >
+                        {{ link.text }}
+                      </a>
+                    </li>
+                  </ul>
+                </scrollactive>
+              </div>
+            </details>
           </header>
           <div class="prose mx-auto prose-blue max-w-none tracking-wider">
             <nuxt-content :document="page" />
           </div>
           <div
-            class="lg:grid lg:grid-cols-2 lg:gap-6 mt-3 lg:mt-8 lg:pt-8 border-t border-gray-200"
+            class="lg:grid lg:grid-cols-2 lg:gap-6 mt-6 lg:mt-12 lg:pt-12 border-t border-gray-200"
           >
             <div class="my-5 lg:my-0 col-span-1">
               <NuxtLink
@@ -99,31 +130,6 @@
                     </nuxt-link>
                   </li>
                 </ul>
-              </div>
-              <div
-                v-if="page.toc && page.toc.length > 0"
-                class="rounded-md bg-white border border-gray-100 shadow-md py-4 px-8 mb-4"
-              >
-                <scrollactive active-class="text-gray-800" :offset="80">
-                  <ul class="list-disc pl-5">
-                    <li
-                      v-for="link of page.toc"
-                      :key="link.id"
-                      class="my-2 text-gray-500 leading-snug text-sm"
-                      :class="{
-                        'font-bold': link.depth === 2,
-                        'ml-5': link.depth === 3,
-                      }"
-                    >
-                      <a
-                        :href="`#${link.id}`"
-                        class="hover:underline scrollactive-item"
-                      >
-                        {{ link.text }}
-                      </a>
-                    </li>
-                  </ul>
-                </scrollactive>
               </div>
               <div
                 class="rounded-md bg-white border border-gray-100 shadow-md p-2"
