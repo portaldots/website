@@ -212,8 +212,6 @@ export default {
   },
   computed: {
     githubMarkdownUrl() {
-      console.log(this.page)
-      // return `https://github.com/portal-dots/website/blob/main/content/docs/${this.$route.params.category}/${this.$route.params.subcategory}/${this.$route.params.slug}.md`
       return `https://github.com/portal-dots/website/blob/main/content${this.page.path}${this.page.extension}`
     },
   },
