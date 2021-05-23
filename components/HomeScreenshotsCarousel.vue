@@ -40,6 +40,10 @@ export default {
     imageSources() {
       return [
         createImageSourceItem(
+          require('@/assets/img/screenshots/screenshot_tile.png'),
+          'PortalDotsの画面'
+        ),
+        createImageSourceItem(
           require('@/assets/img/screenshots/screenshot_home.png'),
           'トップページ'
         ),
