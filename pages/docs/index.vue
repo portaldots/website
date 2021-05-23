@@ -5,7 +5,7 @@
       description="PortalDots のセットアップ方法や使い方をご説明します。"
     />
 
-    <section class="docs-main">
+    <section class="docs-main mb-10">
       <AppContainer>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <DocsCategoryItem

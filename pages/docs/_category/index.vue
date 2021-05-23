@@ -5,17 +5,19 @@
       :title="categoryInfo.title"
       :description="categoryInfo.description"
     />
-    <AppContainer class="relative z-10 docs-category__content">
-      <div class="rounded-md bg-white shadow-md overflow-hidden">
-        <DocsArticleItem
-          v-for="article in articles"
-          :key="article.slug"
-          :to="`/docs/${categoryInfo.slug}/${article.slug}/`"
-          :title="article.title"
-          :description="article.description"
-        />
-      </div>
-    </AppContainer>
+    <div class="mb-10">
+      <AppContainer class="relative z-10 docs-category__content">
+        <div class="rounded-md bg-white shadow-md overflow-hidden">
+          <DocsArticleItem
+            v-for="article in articles"
+            :key="article.slug"
+            :to="`/docs/${categoryInfo.slug}/${article.slug}/`"
+            :title="article.title"
+            :description="article.description"
+          />
+        </div>
+      </AppContainer>
+    </div>
   </div>
 </template>
 
