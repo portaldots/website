@@ -66,38 +66,42 @@
             <nuxt-content :document="page" />
           </div>
           <div
-            class="lg:grid lg:grid-cols-2 lg:gap-6 mt-6 lg:mt-12 lg:pt-12 border-t border-gray-200"
+            class="sm:grid sm:grid-cols-2 sm:gap-6 mt-6 sm:mt-12 sm:pt-12 border-t border-gray-200"
           >
-            <div class="my-5 lg:my-0 col-span-1">
+            <div class="my-5 sm:my-0 col-span-1">
               <NuxtLink
                 v-if="prev"
                 :to="`${prev.path}/`"
-                class="p-3 h-full flex leading-normal rounded hover:shadow-md border border-gray-200 transform hover:-translate-y-0.5 transition"
+                class="p-3 h-full block leading-normal rounded hover:shadow-md border border-gray-200 transform hover:-translate-y-0.5 transition"
               >
-                <font-awesome-icon
-                  :icon="['fas', 'arrow-left']"
-                  class="mr-3 text-gray-500"
-                />
-                <div>
-                  <div class="text-xs mb-1 font-bold text-gray-500">前へ</div>
-                  <div class="text-blue-600">{{ prev.title }}</div>
+                <div
+                  class="text-xs mb-1 font-bold text-gray-500 flex items-center"
+                >
+                  <font-awesome-icon
+                    :icon="['fas', 'arrow-left']"
+                    class="mr-1 text-gray-500"
+                  />
+                  前へ
                 </div>
+                <div class="text-blue-600">{{ prev.title }}</div>
               </NuxtLink>
             </div>
-            <div class="my-5 lg:my-0 col-span-1 lg:text-right">
+            <div class="my-5 sm:my-0 col-span-1 sm:text-right">
               <NuxtLink
                 v-if="next"
                 :to="`${next.path}/`"
-                class="p-3 h-full flex lg:flex-row-reverse leading-normal rounded hover:shadow-md border border-gray-200 transform hover:-translate-y-0.5 transition"
+                class="p-3 h-full block leading-normal rounded hover:shadow-md border border-gray-200 transform hover:-translate-y-0.5 transition"
               >
-                <font-awesome-icon
-                  :icon="['fas', 'arrow-right']"
-                  class="mr-3 lg:mr-0 lg:ml-3 text-gray-500"
-                />
-                <div>
-                  <div class="text-xs mb-1 font-bold text-gray-500">次へ</div>
-                  <div class="text-blue-600">{{ next.title }}</div>
+                <div
+                  class="text-xs mb-1 font-bold text-gray-500 flex items-center flex-row-reverse justify-end sm:flex-row"
+                >
+                  次へ
+                  <font-awesome-icon
+                    :icon="['fas', 'arrow-right']"
+                    class="mr-1 sm:mr-0 sm:ml-1 text-gray-500"
+                  />
                 </div>
+                <div class="text-blue-600">{{ next.title }}</div>
               </NuxtLink>
             </div>
           </div>
