@@ -23,7 +23,12 @@
             :key="subCategory.path"
             class="py-6 lg:py-12 border-b border-gray-200 last:border-none"
           >
-            <h2 class="text-xl font-bold mb-2">{{ subCategory.title }}</h2>
+            <h2
+              :id="subCategory.subCategory"
+              class="text-xl font-bold mb-2 -mt-20 pt-20"
+            >
+              {{ subCategory.title }}
+            </h2>
             <ul class="list-disc pl-5 lg:col-count-2">
               <li
                 v-for="article in articles.filter((article) => {

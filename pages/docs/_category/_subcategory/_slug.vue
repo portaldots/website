@@ -4,7 +4,7 @@
     <AppContainer class="relative z-10 p-0 pt-3 md:p-5 md:pt-3">
       <div class="pb-5">
         <AppBackButton
-          :to="`/docs/${categoryInfo.slug}/`"
+          :to="`/docs/${categoryInfo.slug}/#${subCategoryInfo.subCategory}`"
           :label="`${categoryInfo.emoji} ${subCategoryInfo.title}`"
         />
       </div>
