@@ -1,7 +1,7 @@
 ---
 title: ステップ7. メールの一斉配信機能のセットアップ(CRONの設定)
 description: 「お知らせ」をユーザー全員に一斉配信するためには、CRONの設定が必要です。
-subCategory: lolipop
+subCategory: coreserver
 priority: 8
 ---
 
