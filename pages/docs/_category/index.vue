@@ -10,14 +10,6 @@
         <div
           class="rounded-md bg-white shadow-md overflow-hidden px-6 md:px-12"
         >
-          <!-- <DocsArticleItem
-            v-for="article in articles"
-            :key="article.slug"
-            :to="`${article.path}/`"
-            :title="article.title"
-            :description="article.description"
-          /> -->
-
           <section
             v-for="subCategory in subCategories"
             :key="subCategory.path"
