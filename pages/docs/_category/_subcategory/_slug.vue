@@ -129,7 +129,10 @@
                       'text-gray-500': page.slug !== link.slug,
                     }"
                   >
-                    <nuxt-link :to="`${link.path}/`">
+                    <nuxt-link
+                      :to="`${link.path}/`"
+                      class="block hover:underline"
+                    >
                       {{ link.title }}
                     </nuxt-link>
                   </li>
