@@ -51,25 +51,20 @@
             <p class="download-infos__col__paragraph">
               PHP 7.3以上、MySQL 5.7以上が動作するウェブサーバーが必要です。
             </p>
-            <p class="download-infos__col__paragraph">
-              <a
-                href="https://www.sakura.ne.jp/"
-                target="_blank"
-                class="text-blue-500 hover:text-blue-600 hover:underline"
-                >さくらのレンタルサーバ</a
-              >
-              スタンダードプランでの動作を確認しています。
-            </p>
           </section>
           <section class="download-infos__col">
             <h2 class="download-infos__col__heading font-bold">
               セットアップ方法
             </h2>
             <p class="download-infos__col__paragraph">
-              まず、サーバー上でMySQLデータベースを作成してください。その後、ダウンロードしたZIPファイルの中身をサーバーへアップロードしてください。
+              まず、サーバー上でMySQLデータベースを作成してください。その後、ダウンロードしたZIPファイルの中身をサーバーへアップロードしてください。アップロード先のURLへアクセスするとインストーラーが表示されます。指示に従ってインストールを完了させてください。
             </p>
             <p class="download-infos__col__paragraph">
-              アップロード先のURLへアクセスするとインストーラーが表示されます。指示に従ってインストールを完了させてください。
+              詳しくは<nuxt-link
+                to="/docs/setup/"
+                class="text-blue-500 hover:text-blue-600 hover:underline"
+                >マニュアル</nuxt-link
+              >をご覧ください。
             </p>
           </section>
         </div>
