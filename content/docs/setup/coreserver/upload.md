@@ -15,7 +15,7 @@ priority: 6
       ![Cyberduck 環境設定](/docs-images/cyberduck-settings-dotfile.png)
 3. Cyberduckの画面上の「public_html」フォルダをダブルクリックして開きます。
 4. 初期状態ではいくつかのファイルが設置されています。これらは不要なため、ファイル上で右クリックして削除します。
-5. PortalDots.zip をダウンロードし、展開します。
+5. [PortalDots.zip](https://github.com/portal-dots/PortalDots/releases/latest/download/PortalDots.zip) をダウンロードし、展開します。
 6. 展開してできたフォルダの中身を全て「public_html」フォルダ内へアップロードします。Cyberduckの場合、Finder(macOSの場合)またはエクスプローラー(Windowsの場合)からファイルをドラッグ&ドロップしてください。
     - 隠しファイル(ドットで始まるファイル)も含めてアップロードしてください。macOS や Linux などの OS では、デフォルトではこれらのファイルは非表示になっています。macOS の場合、Finder で <docs-kbd>Command</docs-kbd> + <docs-kbd>Shift</docs-kbd> + <docs-kbd>.</docs-kbd> を押すと隠しファイルが表示されます。
       ![Cyberduck でファイルをアップロードする](/docs-images/cyberduck-drag-and-drop.png)
