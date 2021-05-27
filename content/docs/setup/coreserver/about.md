@@ -6,7 +6,7 @@ priority: 1
 ---
 
 <docs-alert type="info">
-  ここでは、2021年5月末リリース予定の PortalDots 3 について説明しています。PortalDots 1 はさくらのレンタルサーバーでのみ動作します。
+  ここでは、PortalDots 3 について説明しています。PortalDots 1 はさくらのレンタルサーバーでのみ動作します。
 </docs-alert>
 
 ## 「コアサーバー」で PortalDots を利用するメリット・デメリット
