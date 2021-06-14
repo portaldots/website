@@ -35,9 +35,18 @@
         <nuxt-link to="/docs/" class="app-header__nav__item">
           マニュアル
         </nuxt-link>
-        <!-- <nuxt-link to="/" class="app-header__nav__item">
-          お問い合わせ
-        </nuxt-link> -->
+        <a
+          href="https://demo.portaldots.com"
+          class="app-header__nav__item"
+          target="_blank"
+          rel="noopener noreferrer"
+          lang="en"
+        >
+          オンラインデモ<font-awesome-icon
+            :icon="['fas', 'external-link-alt']"
+            class="app-header__nav__item__icon"
+          />
+        </a>
         <a
           href="https://github.com/portal-dots/PortalDots"
           class="app-header__nav__item"

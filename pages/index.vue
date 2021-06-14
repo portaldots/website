@@ -13,21 +13,25 @@
               <p class="home-header__description">
                 PHPとMySQLで動作。実際の学園祭運営を通じて培った開発ノウハウを、オープンソースにしました。
               </p>
-              <div class="home-header__actions">
-                <AppButton to="/download/" primary wide>
-                  <span style="color: white">ダウンロード(無料)</span>
-                </AppButton>
+              <div class="home-header__actions flex flex-col lg:flex-row">
                 <AppButton
-                  href="https://github.com/portal-dots/PortalDots"
+                  href="https://demo.portaldots.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  lang="en"
-                  flat
+                  primary
+                  wide
+                  class="mb-3 lg:mb-0 lg:mr-2 text-center"
                 >
-                  <font-awesome-icon :icon="['fab', 'github']" />
-                  GitHub
+                  <!-- ページ読み込み時に文字が一瞬だけ黒く表示されてしまう問題に対処するため、インラインスタイルで文字色を指定 -->
+                  <span style="color: white"
+                    >オンラインデモ<font-awesome-icon
+                      :icon="['fas', 'external-link-alt']"
+                      class="ml-1 opacity-75"
+                  /></span>
                 </AppButton>
-                <!-- <AppButton to="/">使い方ガイド</AppButton> -->
+                <AppButton to="/download/" class="text-center"
+                  >ダウンロード(無料)</AppButton
+                >
               </div>
             </div>
             <div class="w-full flex flex-col items-stretch">
@@ -166,13 +170,28 @@
           <p class="download__lead">
             PHP(7.3以上)とMySQL(5.7以上)に対応しているレンタルサーバーにファイルを設置したら、インストーラーの指示に従うだけ。
           </p>
-          <p class="download__lead mb-3">
+          <p class="download__lead mb-6">
             PortalDotsをダウンロードして、学園祭をさらに楽しくしよう。
           </p>
-          <div class="download__links">
-            <AppButton to="/download/" primary wide>
-              ダウンロード(無料)
+          <div class="download__links flex flex-col lg:flex-row justify-center">
+            <AppButton
+              href="https://demo.portaldots.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              primary
+              wide
+              class="mb-3 lg:mb-0 lg:mr-2 text-center"
+            >
+              <!-- ページ読み込み時に文字が一瞬だけ黒く表示されてしまう問題に対処するため、インラインスタイルで文字色を指定 -->
+              <span style="color: white"
+                >オンラインデモ<font-awesome-icon
+                  :icon="['fas', 'external-link-alt']"
+                  class="ml-1 opacity-75"
+              /></span>
             </AppButton>
+            <AppButton to="/download/" class="text-center"
+              >ダウンロード(無料)</AppButton
+            >
           </div>
         </AppContainer>
       </section>
