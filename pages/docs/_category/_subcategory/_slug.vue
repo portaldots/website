@@ -62,7 +62,7 @@
               </div>
             </details>
           </header>
-          <div class="prose mx-auto prose-blue max-w-none tracking-wider">
+          <div class="prose mx-auto prose-blue max-w-none">
             <nuxt-content :document="page" />
           </div>
           <div
