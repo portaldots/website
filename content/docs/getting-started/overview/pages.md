@@ -5,12 +5,12 @@ subCategory: overview
 priority: 2
 ---
 
-![お知らせのサンプル](/docs-images/getting-started/overview/pages/pages.png)
-
 ## 概要
 PortalDotsの「お知らせ」機能を利用することで、PortalDotsで構築した学園祭ウェブシステム上で「お知らせ」を掲載することができます。また、CRONが適切に設定されている場合、PortalDotsに登録されている全ユーザーに対して「お知らせ」をメール配信できます。
 
 「企画情報管理」の「企画タグ」機能と併用することで、「お知らせ」を閲覧できるユーザーや、「お知らせ」のメール配信を受け取るユーザーを制限することもできます。
+
+![お知らせのサンプル](/docs-images/getting-started/overview/pages/pages.png)
 
 <docs-alert type="info">
   CRONの設定方法はサーバーによって異なります。詳細は<nuxt-link to="/docs/setup/">セットアップ方法</nuxt-link>をご覧ください。

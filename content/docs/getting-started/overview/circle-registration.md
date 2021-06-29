@@ -5,12 +5,12 @@ subCategory: overview
 priority: 1
 ---
 
-![企画参加登録画面のサンプル](/docs-images/getting-started/overview/circle-registration/circle-registration.png)
-
 ## 概要
 PortalDotsの「企画参加登録」機能を有効にすると、学園祭への企画参加登録をオンライン上で受け付けることができます。企画情報の入力から、責任者の登録、企画参加登録の提出までオンライン上で完結するため、企画参加登録を受け付ける手間が大幅に省けます。
 
 受け付けた企画参加登録の一覧は、「スタッフモード」内の「企画情報管理」で確認でき、CSV形式で企画一覧をダウンロードすることもできます。「カスタムフォーム」機能を利用することで、企画参加登録フォームに独自の入力欄(設問)を追加することもできます。
+
+![企画参加登録画面のサンプル](/docs-images/getting-started/overview/circle-registration/circle-registration.png)
 
 ## 「企画参加登録」機能の事前設定
 ### 「企画参加登録」機能を有効にする
