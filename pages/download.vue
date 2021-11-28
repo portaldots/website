@@ -9,12 +9,12 @@
             最新バージョンはこちら
           </h2>
           <p class="download-main__lead">
-            {{ latestReleaseInfo.name }} •
-            {{ bytesToSize(latestReleaseInfo.assets[0].size) }}
+            バージョン {{ latestReleaseInfo.version }} •
+            {{ bytesToSize(latestReleaseInfo.size) }}
           </p>
           <div class="download-main__download-wrap">
             <AppButton
-              :href="latestReleaseInfo.assets[0].browser_download_url"
+              :href="latestReleaseInfo.browser_download_url"
               primary
               wide
               @click="onClickDownload"
@@ -145,7 +145,7 @@ export default {
   components: { AppContainer, AppSubHeader, AppContentTopCard, AppButton },
   async asyncData({ $axios }) {
     const latestReleaseInfo = await $axios.$get(
-      'https://api.github.com/repos/portal-dots/PortalDots/releases/latest'
+      'https://releases.portaldots.com/releases/latest.json?major_version=3'
     )
     return {
       latestReleaseInfo,
@@ -162,7 +162,7 @@ export default {
         'trackEvent',
         'Downloads',
         'Download Release Zip',
-        this.latestReleaseInfo.name,
+        `v${this.latestReleaseInfo.version}`,
       ])
     },
   },
