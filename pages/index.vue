@@ -54,7 +54,7 @@
           </p>
           <p class="mb-2">
             <a
-              href="https://github.com/portal-dots/PortalDots/blob/master/CONTRIBUTING.md"
+              href="https://github.com/portal-dots/PortalDots/blob/3.x/CONTRIBUTING.md"
               target="_blank"
               rel="noopener noreferrer"
               class="text-blue-500 hover:text-blue-600 hover:underline"
@@ -65,13 +65,14 @@
           </p>
           <p>
             <a
-              href="https://crieit.net/posts/introducing-portaldots"
+              href="https://soji.dev/blog/introducing-portaldots"
               target="_blank"
               rel="noopener noreferrer"
               class="text-blue-500 hover:text-blue-600 hover:underline"
             >
               <font-awesome-icon :icon="['fas', 'arrow-right']" fixed-width />
-              「大学祭の参加団体向けウェブシステムをOSS化してみた」 (Crieit)
+              「大学祭の参加団体向けウェブシステムをOSS化してみた」
+              (開発者ブログ)
             </a>
           </p>
         </AppContainer>
