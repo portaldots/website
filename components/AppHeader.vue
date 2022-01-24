@@ -35,6 +35,12 @@
         <nuxt-link to="/docs/" class="app-header__nav__item">
           マニュアル
         </nuxt-link>
+        <nuxt-link
+          to="/docs/getting-started/overview/faq/"
+          class="app-header__nav__item"
+        >
+          よくある質問
+        </nuxt-link>
         <a
           href="https://demo.portaldots.com"
           class="app-header__nav__item"

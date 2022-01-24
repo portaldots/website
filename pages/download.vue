@@ -25,7 +25,7 @@
               ZIP形式でダウンロード
             </AppButton>
           </div>
-          <div class="download-main__sub-links">
+          <div class="download-main__sub-links font-bold">
             <a
               :href="latestReleaseInfo.html_url"
               target="_blank"
@@ -42,6 +42,14 @@
               過去のバージョン
             </a>
             •
+            <nuxt-link
+              to="/docs/getting-started/overview/faq/"
+              class="text-blue-500 hover:text-blue-600 hover:underline"
+            >
+              よくある質問
+            </nuxt-link>
+          </div>
+          <div class="download-main__sub-links">
             <a
               href="https://github.com/portal-dots/PortalDots/blob/3.x/LICENSE"
               target="_blank"
@@ -74,6 +82,10 @@
                 to="/docs/setup/"
                 class="text-blue-500 hover:text-blue-600 hover:underline"
                 >マニュアル</nuxt-link
+              >や<nuxt-link
+                to="/docs/getting-started/overview/faq/"
+                class="text-blue-500 hover:text-blue-600 hover:underline"
+                >よくある質問</nuxt-link
               >をご覧ください。
             </p>
           </section>
@@ -215,7 +227,6 @@ export default {
     }
 
     &__sub-links {
-      font-weight: bold;
       color: $color-muted;
     }
   }
