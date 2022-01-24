@@ -20,6 +20,9 @@ module.exports = {
               marginTop: '4rem',
               marginBottom: '2rem',
             },
+            h3: {
+              marginTop: '3rem',
+            },
             code: {
               '&::before, &::after': {
                 display: 'none',
