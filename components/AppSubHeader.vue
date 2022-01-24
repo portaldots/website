@@ -41,14 +41,14 @@ export default {
     linear-gradient(120deg, #{$color-primary}, #{$color-primary-2});
   text-align: center;
 
-  @media screen and (max-width: 767.5px) {
+  @media screen and (max-width: 1024px) {
     padding: $app-header-height 0 0;
   }
 
   &__wrap {
     padding: $spacing 0 #{$spacing-xl * 3};
 
-    @media screen and (max-width: 767.5px) {
+    @media screen and (max-width: 1024px) {
       padding: $spacing-s 0 #{$spacing-xl * 2.5};
     }
   }
@@ -62,7 +62,7 @@ export default {
     background-clip: text;
     -webkit-background-clip: text;
 
-    @media screen and (max-width: 767.5px) {
+    @media screen and (max-width: 1024px) {
       font-size: 1.75rem;
     }
   }

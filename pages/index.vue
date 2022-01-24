@@ -236,7 +236,7 @@ export default {
   align-items: center;
   overflow: hidden;
 
-  @media screen and (max-width: 767.5px) {
+  @media screen and (max-width: 1024px) {
     padding: #{$app-header-height * 1.5} 0 $app-header-height;
     min-height: auto;
   }
@@ -250,7 +250,7 @@ export default {
     background-clip: text;
     -webkit-background-clip: text;
 
-    @media screen and (max-width: 767.5px) {
+    @media screen and (max-width: 1024px) {
       font-size: 2.25rem;
     }
   }
@@ -271,7 +271,7 @@ export default {
     height: auto;
     margin-left: -3rem;
 
-    @media screen and (max-width: 767.5px) {
+    @media screen and (max-width: 1024px) {
       max-width: initial;
       width: 150%;
       min-width: 1px;
@@ -296,7 +296,7 @@ export default {
     margin: 0 0 0.75rem;
     letter-spacing: -0.1px;
 
-    @media screen and (max-width: 767.5px) {
+    @media screen and (max-width: 1024px) {
       font-size: 1.5rem;
       line-height: 1.5;
     }

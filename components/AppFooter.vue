@@ -62,7 +62,7 @@ export default {
   color: #fff;
   background: $color-muted;
 
-  @media screen and (max-width: 767.5px) {
+  @media screen and (max-width: 1024px) {
     text-align: center;
   }
 
@@ -78,7 +78,7 @@ export default {
     display: flex;
     justify-content: flex-end;
 
-    @media screen and (max-width: 767.5px) {
+    @media screen and (max-width: 1024px) {
       justify-content: center;
     }
 

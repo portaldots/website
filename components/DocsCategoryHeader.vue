@@ -50,7 +50,7 @@ export default {
   background: linear-gradient(to bottom, rgba(#fff, 0.9), rgba(#fff, 0.9)),
     linear-gradient(120deg, #{$color-primary}, #{$color-primary-2});
 
-  @media screen and (max-width: 767.5px) {
+  @media screen and (max-width: 1024px) {
     padding: $app-header-height 0 0;
   }
 }

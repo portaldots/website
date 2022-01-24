@@ -188,7 +188,7 @@ export default {
     display: none;
   }
 
-  @media screen and (max-width: 767.5px) {
+  @media screen and (max-width: 1024px) {
     height: $app-header-height;
     padding-top: 0;
     padding-bottom: 0;

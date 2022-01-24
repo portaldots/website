@@ -249,7 +249,7 @@ export default {
       min-width: 50%;
       margin: 0 0 $spacing-lg;
 
-      @media screen and (max-width: 767.5px) {
+      @media screen and (max-width: 1024px) {
         flex: 0 0 100%;
         min-width: 1;
       }

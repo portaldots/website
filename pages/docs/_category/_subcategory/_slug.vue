@@ -236,7 +236,7 @@ export default {
   padding: $app-header-height-top 0 0;
   position: relative;
 
-  @media screen and (max-width: 767.5px) {
+  @media screen and (max-width: 1024px) {
     padding: $app-header-height 0 0;
   }
 
