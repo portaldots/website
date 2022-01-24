@@ -41,6 +41,14 @@
             >
               過去のバージョン
             </a>
+            •
+            <a
+              href="https://github.com/portal-dots/PortalDots/blob/3.x/LICENSE"
+              target="_blank"
+              class="text-blue-500 hover:text-blue-600 hover:underline"
+            >
+              ライセンス (MIT License)
+            </a>
           </div>
         </AppContentTopCard>
       </AppContainer>
