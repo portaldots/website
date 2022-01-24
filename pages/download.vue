@@ -9,7 +9,9 @@
             最新バージョンはこちら
           </h2>
           <p class="download-main__lead">
-            バージョン {{ latestReleaseInfo.version }} •
+            バージョン {{ latestReleaseInfo.version }} ({{
+              iso8601ToDateString(latestReleaseInfo.published_at)
+            }}リリース) •
             {{ bytesToSize(latestReleaseInfo.size) }}
           </p>
           <div class="download-main__download-wrap">
@@ -156,6 +158,10 @@ export default {
       const sizes = ['B', 'KB', 'MB', 'GB', 'TB']
       const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)))
       return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i]
+    },
+    iso8601ToDateString(iso8601) {
+      const date = new Date(iso8601)
+      return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`
     },
     onClickDownload() {
       window._paq.push([
