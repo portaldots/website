@@ -22,6 +22,13 @@ module.exports = {
             },
             h3: {
               marginTop: '3rem',
+              fontWeight: 'bold',
+            },
+            strong: {
+              fontWeight: 'bold',
+            },
+            'strong a': {
+              fontWeight: 'bold',
             },
             code: {
               '&::before, &::after': {
