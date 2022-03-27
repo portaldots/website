@@ -13,6 +13,11 @@
               <p class="home-header__description">
                 PHPとMySQLで動作。実際の学園祭運営を通じて培った開発ノウハウを、オープンソースにしました。
               </p>
+              <docs-alert type="infoInverse">
+                <nuxt-link to="/download/" class="hover:underline">
+                  <strong>2022/3/27</strong> PortalDots 4 をリリースしました！
+                </nuxt-link>
+              </docs-alert>
               <div class="home-header__actions flex flex-col lg:flex-row">
                 <AppButton
                   href="https://demo.portaldots.com"

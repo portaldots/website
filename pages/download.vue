@@ -63,6 +63,16 @@
     </section>
     <div class="download-infos">
       <AppContainer small class="download-infos__content">
+        <docs-alert type="info">
+          <a
+            href="https://soji.dev/blog/portaldots-4"
+            class="underline font-bold"
+            target="_blank"
+          >
+            PortalDots 4 の新機能はこちら
+          </a>
+        </docs-alert>
+        <div class="h-5" />
         <div class="download-infos__row">
           <section class="download-infos__col">
             <h2 class="download-infos__col__heading font-bold">動作環境</h2>

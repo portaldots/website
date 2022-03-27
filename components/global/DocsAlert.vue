@@ -20,6 +20,7 @@ export default {
       const types = {
         info: 'border-blue-300 bg-blue-50 text-blue-800',
         warning: 'border-yellow-300 bg-yellow-50 text-yellow-800',
+        infoInverse: 'border-blue-300 bg-white text-blue-800 shadow',
       }
       return types[this.type]
     },
@@ -27,6 +28,7 @@ export default {
       const types = {
         info: ['fas', 'info-circle'],
         warning: ['fas', 'exclamation-triangle'],
+        infoInverse: ['fas', 'info-circle'],
       }
       return types[this.type]
     },
