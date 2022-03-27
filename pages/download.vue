@@ -167,7 +167,7 @@ export default {
   components: { AppContainer, AppSubHeader, AppContentTopCard, AppButton },
   async asyncData({ $axios }) {
     const latestReleaseInfo = await $axios.$get(
-      'https://releases.portaldots.com/releases/latest.json?major_version=3'
+      'https://releases.portaldots.com/releases/latest.json?major_version=4'
     )
     return {
       latestReleaseInfo,
