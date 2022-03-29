@@ -42,12 +42,15 @@
               過去のバージョン
             </a>
             •
-            <nuxt-link
-              to="/docs/getting-started/overview/faq/"
+
+            <a
+              href="https://docs.portaldots.com/faq"
+              target="_blank"
+              rel="noopener noreferrer"
               class="text-blue-500 hover:text-blue-600 hover:underline"
             >
               よくある質問
-            </nuxt-link>
+            </a>
           </div>
           <div class="download-main__sub-links">
             <a
