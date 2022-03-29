@@ -146,9 +146,9 @@
             <p class="download-infos__col__paragraph">
               メールアドレス :
               <a
-                href="mailto:portal-dots@hrgrweb.com"
+                href="mailto:support@portaldots.com"
                 class="text-blue-500 hover:text-blue-600 hover:underline"
-                >portal-dots@hrgrweb.com</a
+                >support@portaldots.com</a
               >
             </p>
             <p class="download-infos__col__paragraph">

@@ -9,7 +9,7 @@
             <ul class="app-footer__social" aria-label="ソーシャルメディア">
               <li class="app-footer__social__listitem">
                 <a
-                  href="mailto:portal-dots@hrgrweb.com"
+                  href="mailto:support@portaldots.com"
                   class="app-footer__social__link"
                   aria-label="PortalDotsにメールで問い合わせる"
                 >
