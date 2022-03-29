@@ -91,7 +91,7 @@
               詳しくは
               <a
                 href="https://docs.portaldots.com"
-                class="app-header__nav__item"
+                class="text-blue-500 hover:text-blue-600 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -100,7 +100,7 @@
               や
               <a
                 href="https://docs.portaldots.com/faq"
-                class="app-header__nav__item"
+                class="text-blue-500 hover:text-blue-600 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
