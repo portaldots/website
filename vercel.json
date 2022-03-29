@@ -5,8 +5,8 @@
       "destination": "https://docs.portaldots.com/"
     },
     {
-      "source": "/docs/getting-started/overview/places/",
-      "destination": "https://docs.portaldots.com/features/places"
+      "source": "/docs/getting-started/",
+      "destination": "https://docs.portaldots.com/features/list"
     },
     {
       "source": "/docs/getting-started/overview/faq/",
@@ -33,8 +33,8 @@
       "destination": "https://docs.portaldots.com/setup/install/coreserver/ssl"
     },
     {
-      "source": "/docs/setup/lollipop/email/",
-      "destination": "https://docs.portaldots.com/setup/install/lollipop/email"
+      "source": "/docs/setup/lolipop/email/",
+      "destination": "https://docs.portaldots.com/setup/install/lolipop/email"
     },
     {
       "source": "/docs/setup/",
@@ -49,8 +49,8 @@
       "destination": "https://docs.portaldots.com/setup/install/coreserver/cron"
     },
     {
-      "source": "/docs/setup/lollipop/about/",
-      "destination": "https://docs.portaldots.com/setup/install/lollipop"
+      "source": "/docs/setup/lolipop/about/",
+      "destination": "https://docs.portaldots.com/setup/install/lolipop"
     },
     {
       "source": "/docs/getting-started/overview/",
@@ -61,24 +61,24 @@
       "destination": "https://docs.portaldots.com/setup/install/coreserver/trouble-shooting"
     },
     {
-      "source": "/docs/setup/lollipop/register/",
-      "destination": "https://docs.portaldots.com/setup/install/lollipop/register"
+      "source": "/docs/setup/lolipop/register/",
+      "destination": "https://docs.portaldots.com/setup/install/lolipop/register"
     },
     {
       "source": "/docs/setup/",
       "destination": "https://docs.portaldots.com/setup/install"
     },
     {
-      "source": "/docs/setup/lollipop/trouble-shooting/",
-      "destination": "https://docs.portaldots.com/setup/install/lollipop/trouble-shooting"
+      "source": "/docs/setup/lolipop/trouble-shooting/",
+      "destination": "https://docs.portaldots.com/setup/install/lolipop/trouble-shooting"
     },
     {
-      "source": "/docs/setup/lollipop/install/",
-      "destination": "https://docs.portaldots.com/setup/install/lollipop/install"
+      "source": "/docs/setup/lolipop/install/",
+      "destination": "https://docs.portaldots.com/setup/install/lolipop/install"
     },
     {
-      "source": "/docs/setup/lollipop/database/",
-      "destination": "https://docs.portaldots.com/setup/install/lollipop/database"
+      "source": "/docs/setup/lolipop/database/",
+      "destination": "https://docs.portaldots.com/setup/install/lolipop/database"
     },
     {
       "source": "/docs/getting-started/overview/documents/",
@@ -93,12 +93,12 @@
       "destination": "https://docs.portaldots.com/setup/install/coreserver/email"
     },
     {
-      "source": "/docs/setup/lollipop/cron/",
-      "destination": "https://docs.portaldots.com/setup/install/lollipop/cron"
+      "source": "/docs/setup/lolipop/cron/",
+      "destination": "https://docs.portaldots.com/setup/install/lolipop/cron"
     },
     {
-      "source": "/docs/setup/lollipop/upload/",
-      "destination": "https://docs.portaldots.com/setup/install/lollipop/upload"
+      "source": "/docs/setup/lolipop/upload/",
+      "destination": "https://docs.portaldots.com/setup/install/lolipop/upload"
     },
     {
       "source": "/docs/getting-started/overview/list/",
