@@ -1,0 +1,116 @@
+{
+  "redirects": [
+    {
+      "source": "/docs/",
+      "destination": "https://docs.portaldots.com/"
+    },
+    {
+      "source": "/docs/getting-started/overview/places/",
+      "destination": "https://docs.portaldots.com/features/places"
+    },
+    {
+      "source": "/docs/getting-started/overview/faq/",
+      "destination": "https://docs.portaldots.com/faq"
+    },
+    {
+      "source": "/docs/setup/coreserver/database/",
+      "destination": "https://docs.portaldots.com/setup/install/coreserver/database"
+    },
+    {
+      "source": "/docs/getting-started/user-registration/user-registration/",
+      "destination": "https://docs.portaldots.com/setup/user-registration"
+    },
+    {
+      "source": "/docs/getting-started/overview/pages/",
+      "destination": "https://docs.portaldots.com/features/pages"
+    },
+    {
+      "source": "/docs/setup/coreserver/about/",
+      "destination": "https://docs.portaldots.com/setup/install/coreserver"
+    },
+    {
+      "source": "/docs/setup/coreserver/ssl/",
+      "destination": "https://docs.portaldots.com/setup/install/coreserver/ssl"
+    },
+    {
+      "source": "/docs/setup/lollipop/email/",
+      "destination": "https://docs.portaldots.com/setup/install/lollipop/email"
+    },
+    {
+      "source": "/docs/setup/",
+      "destination": "https://docs.portaldots.com/setup/install"
+    },
+    {
+      "source": "/docs/setup/coreserver/upload/",
+      "destination": "https://docs.portaldots.com/setup/install/coreserver/upload"
+    },
+    {
+      "source": "/docs/setup/coreserver/cron/",
+      "destination": "https://docs.portaldots.com/setup/install/coreserver/cron"
+    },
+    {
+      "source": "/docs/setup/lollipop/about/",
+      "destination": "https://docs.portaldots.com/setup/install/lollipop"
+    },
+    {
+      "source": "/docs/getting-started/overview/",
+      "destination": "https://docs.portaldots.com/features"
+    },
+    {
+      "source": "/docs/setup/coreserver/trouble-shooting/",
+      "destination": "https://docs.portaldots.com/setup/install/coreserver/trouble-shooting"
+    },
+    {
+      "source": "/docs/setup/lollipop/register/",
+      "destination": "https://docs.portaldots.com/setup/install/lollipop/register"
+    },
+    {
+      "source": "/docs/setup/",
+      "destination": "https://docs.portaldots.com/setup/install"
+    },
+    {
+      "source": "/docs/setup/lollipop/trouble-shooting/",
+      "destination": "https://docs.portaldots.com/setup/install/lollipop/trouble-shooting"
+    },
+    {
+      "source": "/docs/setup/lollipop/install/",
+      "destination": "https://docs.portaldots.com/setup/install/lollipop/install"
+    },
+    {
+      "source": "/docs/setup/lollipop/database/",
+      "destination": "https://docs.portaldots.com/setup/install/lollipop/database"
+    },
+    {
+      "source": "/docs/getting-started/overview/documents/",
+      "destination": "https://docs.portaldots.com/features/documents"
+    },
+    {
+      "source": "/docs/setup/coreserver/register/",
+      "destination": "https://docs.portaldots.com/setup/install/coreserver/register"
+    },
+    {
+      "source": "/docs/setup/coreserver/email/",
+      "destination": "https://docs.portaldots.com/setup/install/coreserver/email"
+    },
+    {
+      "source": "/docs/setup/lollipop/cron/",
+      "destination": "https://docs.portaldots.com/setup/install/lollipop/cron"
+    },
+    {
+      "source": "/docs/setup/lollipop/upload/",
+      "destination": "https://docs.portaldots.com/setup/install/lollipop/upload"
+    },
+    {
+      "source": "/docs/getting-started/overview/list/",
+      "destination": "https://docs.portaldots.com/features/list"
+    },
+    {
+      "source": "/docs/getting-started/overview/circle-registration/",
+      "destination": "https://docs.portaldots.com/features/circle-registration"
+    },
+    {
+      "source": "/docs/setup/coreserver/install/",
+      "destination": "https://docs.portaldots.com/setup/install/coreserver/install"
+    }
+  ]
+}
