@@ -32,21 +32,33 @@
         @click="toggle"
       >
         <nuxt-link to="/" class="app-header__nav__item">ホーム</nuxt-link>
-        <nuxt-link to="/docs/" class="app-header__nav__item">
-          マニュアル
-        </nuxt-link>
-        <nuxt-link
-          to="/docs/getting-started/overview/faq/"
+        <a
+          href="https://docs.portaldots.com"
           class="app-header__nav__item"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          よくある質問
-        </nuxt-link>
+          マニュアル<font-awesome-icon
+            :icon="['fas', 'external-link-alt']"
+            class="app-header__nav__item__icon"
+          />
+        </a>
+        <a
+          href="https://docs.portaldots.com/faq"
+          class="app-header__nav__item"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          よくある質問<font-awesome-icon
+            :icon="['fas', 'external-link-alt']"
+            class="app-header__nav__item__icon"
+          />
+        </a>
         <a
           href="https://demo.portaldots.com"
           class="app-header__nav__item"
           target="_blank"
           rel="noopener noreferrer"
-          lang="en"
         >
           オンラインデモ<font-awesome-icon
             :icon="['fas', 'external-link-alt']"

@@ -88,15 +88,25 @@
               まず、サーバー上でMySQLデータベースを作成してください。その後、ダウンロードしたZIPファイルの中身をサーバーへアップロードしてください。アップロード先のURLへアクセスするとインストーラーが表示されます。指示に従ってインストールを完了させてください。
             </p>
             <p class="download-infos__col__paragraph">
-              詳しくは<nuxt-link
-                to="/docs/setup/"
-                class="text-blue-500 hover:text-blue-600 hover:underline"
-                >マニュアル</nuxt-link
-              >や<nuxt-link
-                to="/docs/getting-started/overview/faq/"
-                class="text-blue-500 hover:text-blue-600 hover:underline"
-                >よくある質問</nuxt-link
-              >をご覧ください。
+              詳しくは
+              <a
+                href="https://docs.portaldots.com"
+                class="app-header__nav__item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                マニュアル
+              </a>
+              や
+              <a
+                href="https://docs.portaldots.com/faq"
+                class="app-header__nav__item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                よくある質問
+              </a>
+              をご覧ください。
             </p>
           </section>
         </div>
