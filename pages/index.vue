@@ -46,6 +46,8 @@
           <img
             src="@/assets/img/eyecatch.png"
             class="block w-full h-auto mt-12"
+            width="3614"
+            height="2298"
             alt=""
           />
         </AppContainer>
