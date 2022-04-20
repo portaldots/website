@@ -3,7 +3,7 @@
     :is="componentIs"
     :href="href ? href : undefined"
     :to="to ? to : undefined"
-    class="app-button"
+    class="app-button cursor-pointer inline-block text-blue-500 text-base"
     :class="{ 'is-flat': flat, 'is-primary': primary, 'is-wide': wide }"
     @click="handleClick"
   >
@@ -52,14 +52,9 @@ export default {
 
 <style lang="scss" scoped>
 .app-button {
-  appearance: none;
-  border: none;
-  cursor: pointer;
   background: $color-bg-white;
-  display: inline-block;
   padding: $spacing-sm $spacing;
   text-decoration: none;
-  color: $color-primary;
   font-weight: bold;
   border-radius: 0.4rem;
   box-shadow: 0 0.2rem 0.8rem rgba($color-primary, 0.2);

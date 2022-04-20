@@ -1,5 +1,8 @@
 <template>
-  <div class="app-container" :class="{ 'is-small': small, 'is-wide': wide }">
+  <div
+    class="container mx-auto px-4"
+    :class="{ 'max-w-screen-md': small, 'max-w-screen-2xl': wide }"
+  >
     <slot />
   </div>
 </template>
@@ -18,21 +21,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-.app-container {
-  padding-left: $spacing;
-  padding-right: $spacing;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1200px;
-
-  &.is-wide {
-    max-width: 1600px;
-  }
-
-  &.is-small {
-    max-width: 800px;
-  }
-}
-</style>

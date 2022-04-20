@@ -1,52 +1,53 @@
 <template>
   <div>
     <main class="app-main">
-      <div class="home-header">
-        <AppContainer class="home-header__container">
-          <div
-            class="flex flex-col items-stretch md:grid md:grid-cols-2 md:gap-3"
-          >
-            <div class="flex flex-col justify-center">
-              <h1 class="home-header__copy font-bold">
-                みんなでつくる、オープンソースの学園祭運営ウェブシステム。
+      <div>
+        <div class="bg-purple-50 pt-4 md:pt-24 pb-32 -mb-32 md:pb-80 md:-mb-80">
+          <div class="home-header-padding" />
+          <AppContainer>
+            <div class="text-center">
+              <h1
+                class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter"
+              >
+                <span class="inline-block">最強の</span
+                ><span class="inline-block">学園祭</span
+                ><span class="inline-block">ウェブシステム</span>
               </h1>
-              <p class="home-header__description">
-                PHPとMySQLで動作。実際の学園祭運営を通じて培った開発ノウハウを、オープンソースにしました。
-              </p>
-              <docs-alert type="infoInverse">
-                <nuxt-link to="/download/" class="hover:underline">
-                  <strong>2022/3/27</strong> PortalDots 4 をリリースしました！
-                </nuxt-link>
-              </docs-alert>
-              <div class="home-header__actions flex flex-col lg:flex-row">
-                <AppButton
-                  href="https://demo.portaldots.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  primary
-                  wide
-                  class="mb-3 lg:mb-0 lg:mr-2 text-center"
-                >
-                  <!-- ページ読み込み時に文字が一瞬だけ黒く表示されてしまう問題に対処するため、インラインスタイルで文字色を指定 -->
-                  <span style="color: white"
-                    >オンラインデモ<font-awesome-icon
-                      :icon="['fas', 'external-link-alt']"
-                      class="ml-1 opacity-75"
-                  /></span>
-                </AppButton>
-                <AppButton to="/download/" class="text-center"
-                  >ダウンロード(無料)</AppButton
-                >
+              <div class="mt-6 sm:text-lg leading-relaxed md:leading-relaxed">
+                <p>学園祭の運営業務に必要なツールを全てここに。</p>
+                <p>セルフホスト型、オープンソース、元実行委員が開発。</p>
               </div>
             </div>
-            <div class="w-full flex flex-col items-stretch">
-              <img
-                src="@/assets/img/main_screenshot.png"
-                alt="メインスクリーンショット"
-                class="home-header__main-screenshot"
-              />
+            <div
+              class="flex flex-col max-w-xs sm:max-w-none mx-auto sm:flex-row justify-center mt-6 gap-3"
+            >
+              <AppButton
+                href="https://demo.portaldots.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                primary
+                wide
+                class="text-center"
+              >
+                <!-- ページ読み込み時に文字が一瞬だけ黒く表示されてしまう問題に対処するため、インラインスタイルで文字色を指定 -->
+                <span style="color: white"
+                  >試しに使ってみる<font-awesome-icon
+                    :icon="['fas', 'external-link-alt']"
+                    class="ml-1 opacity-75"
+                /></span>
+              </AppButton>
+              <AppButton to="/download/" class="text-center"
+                >ダウンロード(無料)</AppButton
+              >
             </div>
-          </div>
+          </AppContainer>
+        </div>
+        <AppContainer>
+          <img
+            src="@/assets/img/eyecatch.png"
+            class="block w-full h-auto mt-12"
+            alt=""
+          />
         </AppContainer>
       </div>
       <section class="about">
@@ -179,18 +180,20 @@
           <p class="download__lead mb-6">
             PortalDotsをダウンロードして、学園祭をさらに楽しくしよう。
           </p>
-          <div class="download__links flex flex-col lg:flex-row justify-center">
+          <div
+            class="flex flex-col max-w-xs sm:max-w-none mx-auto sm:flex-row justify-center mt-6 gap-3"
+          >
             <AppButton
               href="https://demo.portaldots.com"
               target="_blank"
               rel="noopener noreferrer"
               primary
               wide
-              class="mb-3 lg:mb-0 lg:mr-2 text-center"
+              class="text-center"
             >
               <!-- ページ読み込み時に文字が一瞬だけ黒く表示されてしまう問題に対処するため、インラインスタイルで文字色を指定 -->
               <span style="color: white"
-                >オンラインデモ<font-awesome-icon
+                >試しに使ってみる<font-awesome-icon
                   :icon="['fas', 'external-link-alt']"
                   class="ml-1 opacity-75"
               /></span>
@@ -228,61 +231,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.home-header {
-  background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0.9)
-    ),
-    linear-gradient(120deg, #{$color-primary}, #{$color-primary-2});
-  padding: $app-header-height 0;
-  min-height: #{'min(max(1000px, 90vh), 80vw)'};
-  display: flex;
-  align-items: center;
-  overflow: hidden;
+.home-header-padding {
+  padding: $app-header-height 0 0;
 
   @media screen and (max-width: 1024px) {
-    padding: #{$app-header-height * 1.5} 0 $app-header-height;
-    min-height: auto;
-  }
-
-  &__copy {
-    font-size: 2.75rem;
-    line-height: 1.4;
-    margin: 0 0 0.75rem;
-    color: transparent;
-    background: linear-gradient(150deg, #{$color-primary}, #{$color-primary-2});
-    background-clip: text;
-    -webkit-background-clip: text;
-
-    @media screen and (max-width: 1024px) {
-      font-size: 2.25rem;
-    }
-  }
-
-  &__description {
-    margin: 0 0 0.75rem;
-    font-weight: bold;
-  }
-
-  &__actions {
-    margin-top: $spacing;
-  }
-
-  &__main-screenshot {
-    display: block;
-    width: #{'min(65vw, 640px)'};
-    min-width: 200%;
-    height: auto;
-    margin-left: -3rem;
-
-    @media screen and (max-width: 1024px) {
-      max-width: initial;
-      width: 150%;
-      min-width: 1px;
-      margin-left: -50%;
-      margin-top: $spacing-xl;
-    }
+    padding: #{$app-header-height * 1.5} 0 0;
   }
 }
 
