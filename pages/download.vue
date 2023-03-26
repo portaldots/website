@@ -196,6 +196,12 @@ export default {
       latestReleaseInfo,
     }
   },
+  head() {
+    return head(
+      'ダウンロード',
+      'PortalDots のプログラムをダウンロードできます。'
+    )
+  },
   methods: {
     bytesToSize(bytes) {
       const sizes = ['B', 'KB', 'MB', 'GB', 'TB']
@@ -214,12 +220,6 @@ export default {
         `v${this.latestReleaseInfo.version}`,
       ])
     },
-  },
-  head() {
-    return head(
-      'ダウンロード',
-      'PortalDots のプログラムをダウンロードできます。'
-    )
   },
 }
 </script>
