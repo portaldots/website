@@ -248,7 +248,7 @@ export default {
       rgba(255, 255, 255, 0.95),
       rgba(255, 255, 255, 0.95)
     ),
-    left top / 60vmax url(~assets/img/logotype.svg) no-repeat;
+    left top / 60vmax url(~assets/img/portaldots-logo-type.svg) no-repeat;
 
   &__heading {
     font-size: 2rem;

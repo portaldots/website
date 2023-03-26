@@ -7,9 +7,11 @@
         :aria-hidden="isOpen ? 'true' : 'false'"
       >
         <img
-          src="@/assets/img/logotype_with_symbol.svg"
+          src="@/assets/img/portaldots-logo.svg"
           class="app-header__logo"
           alt="PortalDots"
+          width="367"
+          height="60"
         />
       </nuxt-link>
       <button
