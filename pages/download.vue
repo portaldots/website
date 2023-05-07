@@ -35,7 +35,7 @@
             </a>
             •
             <a
-              href="https://github.com/portal-dots/PortalDots/releases"
+              href="https://github.com/portaldots/PortalDots/releases"
               target="_blank"
               class="text-blue-500 hover:text-blue-600 hover:underline"
             >
@@ -54,7 +54,7 @@
           </div>
           <div class="download-main__sub-links">
             <a
-              href="https://github.com/portal-dots/PortalDots/blob/3.x/LICENSE"
+              href="https://github.com/portaldots/PortalDots/blob/3.x/LICENSE"
               target="_blank"
               class="text-blue-500 hover:text-blue-600 hover:underline"
             >
@@ -66,21 +66,11 @@
     </section>
     <div class="download-infos">
       <AppContainer small class="download-infos__content">
-        <docs-alert type="info">
-          <a
-            href="https://soji.dev/blog/portaldots-4"
-            class="underline font-bold"
-            target="_blank"
-          >
-            PortalDots 4 の新機能はこちら
-          </a>
-        </docs-alert>
-        <div class="h-5" />
         <div class="download-infos__row">
           <section class="download-infos__col">
             <h2 class="download-infos__col__heading font-bold">動作環境</h2>
             <p class="download-infos__col__paragraph">
-              PHP 7.3以上、MySQL 5.7以上が動作するウェブサーバーが必要です。
+              PHP 8.0以上、MySQL 5.7以上が動作するウェブサーバーが必要です。
             </p>
           </section>
           <section class="download-infos__col">
@@ -190,7 +180,7 @@ export default {
   components: { AppContainer, AppSubHeader, AppContentTopCard, AppButton },
   async asyncData({ $axios }) {
     const latestReleaseInfo = await $axios.$get(
-      'https://releases.portaldots.com/releases/latest.json?major_version=4'
+      'https://releases.portaldots.com/releases/latest.json?major_version=5'
     )
     return {
       latestReleaseInfo,

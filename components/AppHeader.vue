@@ -68,7 +68,7 @@
           />
         </a>
         <a
-          href="https://github.com/portal-dots/PortalDots"
+          href="https://github.com/portaldots/PortalDots"
           class="app-header__nav__item"
           target="_blank"
           rel="noopener noreferrer"
