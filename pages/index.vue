@@ -177,7 +177,7 @@
             class="download__screenshot"
           />
           <p class="download__lead">
-            PHP(7.3以上)とMySQL(5.7以上)に対応しているレンタルサーバーにファイルを設置したら、インストーラーの指示に従うだけ。
+            PHP(8.0以上)とMySQL(5.7以上)に対応しているレンタルサーバーにファイルを設置したら、インストーラーの指示に従うだけ。
           </p>
           <p class="download__lead mb-6">
             PortalDotsをダウンロードして、学園祭をさらに楽しくしよう。
