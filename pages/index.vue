@@ -62,7 +62,7 @@
           </p>
           <p class="mb-2">
             <a
-              href="https://github.com/portaldots/PortalDots/blob/3.x/CONTRIBUTING.md"
+              href="https://github.com/portaldots/PortalDots/blob/5.x/CONTRIBUTING.md"
               target="_blank"
               rel="noopener noreferrer"
               class="text-blue-500 hover:text-blue-600 hover:underline"
